@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BicycleRentalCLI
 {
-    class Worker
+    class Worker : Persistable
     {
         /// <summary>
         /// instance variables/ table columns
@@ -81,3 +81,4 @@ namespace BicycleRentalCLI
         }
     }
 }
+
