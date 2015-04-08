@@ -1,2 +1,7 @@
 C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI\bin\Debug\BicycleRentalCLI.exe.config
 C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\bin\Debug\BicycleRentalCLI.exe.config
+C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\bin\Debug\BicycleRentalCLI.exe
+C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\bin\Debug\BicycleRentalCLI.pdb
+C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\obj\Debug\BicycleRentalCLI.csprojResolveAssemblyReference.cache
+C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\obj\Debug\BicycleRentalCLI.exe
+C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\obj\Debug\BicycleRentalCLI.pdb
