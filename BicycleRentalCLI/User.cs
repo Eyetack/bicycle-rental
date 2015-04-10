@@ -156,17 +156,17 @@ namespace BicycleRentalCLI
         public void update()
         {
             string updateQuery = "UPDATE [User] SET " +
-                " BannerID = '" + this.BannerID + "' , " +
-                " FirstName = '" + this.FirstName + "' , " +
-                " LastName = '" + this.LastName + "' , " +
-                " PhoneNumber = '" + this.PhoneNumber + "' , " +
-                " EmailAddress '" + this.EmailAddress + "' , " +
-                " UserType '" + this.UserType + "' , " +
-                " Notes '" + this.Notes + "' , " +
-                " Status = '" + this.Status + "' " +
+                " BannerID = '" + this.BannerID + "', " +
+                " FirstName = '" + this.FirstName + "', " +
+                " LastName = '" + this.LastName + "', " +
+                " PhoneNumber = '" + this.PhoneNumber + "', " +
+                " EmailAddress = '" + this.EmailAddress + "', " +
+                " UserType = '" + this.UserType + "', " +
+                " Notes = '" + this.Notes + "', " +
+                " Status = '" + this.Status + "', " +
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
-                " ID = " + this.ID;
+                " (ID = " + this.ID+")";
             Console.WriteLine(updateQuery);
             int returnCode = modifyDatabase(updateQuery);
             if (returnCode != 0) Console.WriteLine("Error in updating User object in db.");

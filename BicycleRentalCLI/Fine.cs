@@ -140,11 +140,11 @@ namespace BicycleRentalCLI
         /// </summary>
         public void update()
         {
-            string updateQuery = "UPDATE [User] SET " +
-                " BannerID = '" + this.BorrowerID + "' , " +
-                " FirstName = '" + this.FineAmount + "' , " +
-                " LastName = '" + this.DateFineImposed + "' , " +
-                " PhoneNumber = '" + this.Status + "' , " +
+            string updateQuery = "UPDATE Fine SET " +
+                " BorrowerID = '" + this.BorrowerID + "' , " +
+                " FineAmount = '" + this.FineAmount + "' , " +
+                " DateFineImposed = '" + this.DateFineImposed + "' , " +
+                " Status = '" + this.Status + "' , " +
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
                 " ID = " + this.ID;
