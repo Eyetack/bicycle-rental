@@ -9,12 +9,15 @@ namespace BicycleRentalCLI
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
+
             //<VehicleTesting>
-            Vehicle v = new Vehicle("Schwinn", "5813", "SCH58", "Red", "Classy", "Welcome Center", "New", "-", "Active", "2015-10-02");
+            Vehicle v = new Vehicle("Schwinn", "5813", "SCH58", "Red", "Classy", "Welcome Center", "Good", "-", "Active", "2015-10-02");
+            Vehicle v1 = new Vehicle("Huffy", "7878", "H78A8", "Blue", "Dark", "Seymour Union", "Okay", "-", "Active", "2015-07-02"); 
             //.insert() test
             Console.WriteLine("Starting .insert() test for Vehicle class ------------------------");
             v.insert();
+            v1.insert();
             Console.WriteLine("Ending .insert() test for Vehicle class --------------------------");
             //.populate() test
             Console.WriteLine("Starting .populate() test for Vehicle class ------------------------");
@@ -96,8 +99,16 @@ namespace BicycleRentalCLI
             //.delete() test
             Console.WriteLine("Starting .delete() test for Fine Class");
             f.delete(); //<-- Uncomment this before testing
-            Console.WriteLine("Ending .delete() test for Fine Class");
-            //</FineTesting>
+            Console.WriteLine("Ending .delete() test for Fine Class\n\n");
+            //</FineTesting>*/
+
+            //<VehicleCollectionTesting>
+            Console.WriteLine("Starting test for VehicleCollection class");
+            VehicleCollection vc = new VehicleCollection();
+            Console.WriteLine("Ending test for VehicleCollection class");
+
+
+
 
             Console.ReadLine();
         }

@@ -177,7 +177,7 @@ namespace BicycleRentalCLI
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
                 " ID = " + this.ID;
-            Console.WriteLine(updateQuery);
+            //Console.WriteLine(updateQuery);
             int returnCode = modifyDatabase(updateQuery);
             if (returnCode != 0) Console.WriteLine("Error in updating Vehicle object in db.");
             else Console.WriteLine("Vehicle object successfully updated!");
@@ -187,7 +187,7 @@ namespace BicycleRentalCLI
         {
             string deleteQuery = "DELETE FROM Vehicle WHERE " +
                 " ID = " + this.ID;
-            Console.WriteLine(deleteQuery);
+            //Console.WriteLine(deleteQuery);
             int returnCode = modifyDatabase(deleteQuery);
             if (returnCode != 0) Console.WriteLine("Error in deleting Vehicle object in db.");
             else Console.WriteLine("Vehicle object successfully deleted!");

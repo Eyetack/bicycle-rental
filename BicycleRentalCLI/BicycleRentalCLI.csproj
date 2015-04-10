@@ -48,6 +48,7 @@
     <Compile Include="Rental.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleCollection.cs" />
     <Compile Include="Worker.cs" />
   </ItemGroup>
   <ItemGroup>
