@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.OleDb;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BicycleRentalCLI
 {
-    class Persistable
+    public class Persistable
     {
         System.Data.OleDb.OleDbConnection conn;
         protected static string connectionString { get; set; }

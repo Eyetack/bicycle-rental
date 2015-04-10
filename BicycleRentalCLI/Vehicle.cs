@@ -58,13 +58,12 @@ namespace BicycleRentalCLI
         /// <param name="note">Notes</param>
         /// <param name="st">Status</param>
         /// <param name="dstu">Date Status Updated</param>
-        public Vehicle(int auid, string bm, string mdnum, string sernum, string color, string desc, string locn,
+        public Vehicle(string bm, string mdnum, string sernum, string color, string desc, string locn,
             string phy_cond, string note, string st, string dstu)
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
-            this.ID = auid;
             this.BikeMake = bm;
             this.ModelNumber = mdnum;
             this.SerialNumber = sernum;
@@ -78,7 +77,7 @@ namespace BicycleRentalCLI
         }
 
         //default constructor
-        public Vehicle()
+        public Vehicle() : base()
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
@@ -146,7 +145,8 @@ namespace BicycleRentalCLI
                 List<Object> results = getValues(idQueryString);
                 if (results != null)
                 {
-                    // DEBUG Console.WriteLine("Got an id from id query");
+                    //DEBUG 
+                    Console.WriteLine("Got an id from id query");
                     foreach (object result in results)
                     {
                         IEnumerable<Object> row = result as IEnumerable<Object>;
@@ -164,16 +164,16 @@ namespace BicycleRentalCLI
         /// </summary>
         public void update()
         {
-            string updateQuery = "UPDATE Vehicle SET " +
-                " BikeMake = '" + this.BikeMake + "' , " +
-                " ModelNumber = '" + this.ModelNumber + "' , " +
-                " SerialNumber = '" + this.SerialNumber + "' , " +
-                " Color = '" + this.Color + "' , " +
-                " Description '" + this.Description + "' , " +
-                " Location '" + this.Location + "' , " +
-                " PhysicalCondition '" + this.PhysicalCondition + "' , " +
-                " Notes = '" + this.Notes + "' " +
-                " Status = '" + this.Status + "' " +
+            string updateQuery = "UPDATE Vehicle SET" +
+                " BikeMake = '" + this.BikeMake + "', " +
+                " ModelNumber ='" + this.ModelNumber + "', " +
+                " SerialNumber ='" + this.SerialNumber + "', " +
+                " Color = '" + this.Color + "', " +
+                " Description ='" + this.Description + "', " +
+                " Location = '" + this.Location + "', " +
+                " PhysicalCondition = '" + this.PhysicalCondition + "' , " +
+                " Notes ='" + this.Notes + "', " +
+                " Status ='" + this.Status + "', " +
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
                 " ID = " + this.ID;
@@ -191,6 +191,13 @@ namespace BicycleRentalCLI
             int returnCode = modifyDatabase(deleteQuery);
             if (returnCode != 0) Console.WriteLine("Error in deleting Vehicle object in db.");
             else Console.WriteLine("Vehicle object successfully deleted!");
+        }
+
+        public string ToString() { 
+            return "ID="+this.ID+" BikeMake="+this.BikeMake+" ModelNumber="+this.ModelNumber+
+                " SerialNumber="+this.SerialNumber+ " Color="+this.Color+" Description="+this.Description+
+                " Location="+this.Location+ " PhysicalCondition="+this.PhysicalCondition+" Notes="+this.Notes+
+                " Status="+this.Status+" DateStatusUpdated="+this.DateStatusUpdated;
         }
     }
 }

@@ -44,7 +44,6 @@ namespace BicycleRentalCLI
         /// <summary>
         /// constructor
         /// </summary>
-        /// <param name="auid">Auto Generated ID</param>
         /// <param name="bid">Banner ID</param>
         /// <param name="f">First Name</param>
         /// <param name="l">Last Name</param>
@@ -54,13 +53,12 @@ namespace BicycleRentalCLI
         /// <param name="note">Notes</param>
         /// <param name="st">Status</param>
         /// <param name="dstu">Date Status Updated</param>
-        public User(int auid, int bid, string f, string l, string pn, string em, string ut,
+        public User(int bid, string f, string l, string pn, string em, string ut,
             string note, string st, string dstu)
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
-            this.ID = auid;
             this.BannerID = bid;
             this.FirstName = f;
             this.LastName = l;
