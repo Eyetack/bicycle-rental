@@ -54,9 +54,21 @@ namespace BicycleRentalCLI
                 @"Data source= C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\bin\Debug" +
                 @"\BicycleRental.accdb";
         }
-        
+
+         /// <summary>
+         /// constructor
+         /// </summary>
+         /// <param name="bid">Banner ID</param>
+         /// <param name="f">First Name</param>
+         /// <param name="l">Last Name</param>
+         /// <param name="pn">Phone Number</param>
+         /// <param name="em">Email</param>
+         /// <param name="c">Credential</param>
+         /// <param name="ird">InitialRegistrationDate</param>
+         /// <param name="wpwd">WorkerPassword</param>
+         /// <param name="note">Notes</param>
         public Worker(string bid, string f, string l, string pn, string em, string c, string ird,
-            string wpwd, string note, string st, string dstu) : base()
+            string wpwd, string note) : base()
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                 @"Data source= C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\bin\Debug" +
@@ -70,14 +82,18 @@ namespace BicycleRentalCLI
             this.InitialRegistrationDate = ird;
             this.WorkerPassword = wpwd;
             this.Notes = note;
-            this.Status = st;
-            this.DateStatusUpdated = dstu;
+            this.Status = "Active";
+            this.DateStatusUpdated = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
+        /// <summary>
+        /// populates this Worker object with a Worker entry from the Worker table in our .accdb file
+        /// </summary>
+        /// <param name="id">Auto generated ID</param>
         public void populate(int ID)
         {
             string queryString = "SELECT * FROM Worker WHERE (ID = " + ID + ")";
-            List<Object[]> results = getValues(queryString);
+            List<Object> results = getValues(queryString);
             if (results != null)
             {
                 foreach (Object[] result in results)
@@ -118,6 +134,11 @@ namespace BicycleRentalCLI
             }
         }
         //------------------------------------------------------------------
+
+        /// <summary>
+        /// Inserts an entry into the Worker table in our .accdb file
+        /// </summary>
+        
         public void insert()
         {
 
@@ -144,7 +165,7 @@ namespace BicycleRentalCLI
             {
                 Console.WriteLine("Worker object successfully inserted");
                 string idQueryString = "SELECT MAX(ID) FROM Worker";
-                List<Object[]> results = getValues(idQueryString);
+                List<Object> results = getValues(idQueryString);
                 if (results != null)
                 {
 
@@ -163,6 +184,11 @@ namespace BicycleRentalCLI
             }
         }
         //------------------------------------------------------------------
+
+        /// <summary>
+        /// updates a single entry in the Worker table in our .accdb file
+        /// </summary>
+        
         public void update()
         {
             string updateQuery = "UPDATE Worker SET " +
@@ -186,6 +212,12 @@ namespace BicycleRentalCLI
                 Console.WriteLine("Worker object successfully updated");
         }
         //------------------------------------------------------------------
+
+
+        /// <summary>
+        /// deletes a single entry in the Worker table in our .accdb file.
+        /// </summary>
+        
         public void delete()
         {
             string deleteQuery = "DELETE FROM Worker WHERE " +
@@ -198,7 +230,25 @@ namespace BicycleRentalCLI
         }
         //------------------------------------------------------------------
 
-
+        /// <summary>
+        /// toString function for Worker for output
+        /// </summary>
+        /// </summary>
+        public void toString()
+        {
+            Console.WriteLine(this.ID);
+            Console.WriteLine(this.BannerID);
+            Console.WriteLine(this.FirstName);
+            Console.WriteLine(this.LastName);
+            Console.WriteLine(this.PhoneNumber);
+            Console.WriteLine(this.EmailAddress);
+            Console.WriteLine(this.Credential);
+            Console.WriteLine(this.InitialRegistrationDate);
+            Console.WriteLine(this.WorkerPassword);
+            Console.WriteLine(this.Notes);
+            Console.WriteLine(this.Status);
+            Console.WriteLine(this.DateStatusUpdated);
+        }
 
     }
 }

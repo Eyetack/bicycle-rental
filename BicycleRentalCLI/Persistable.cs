@@ -27,9 +27,9 @@ namespace BicycleRentalCLI
         //  of objects, and return it. This is used when executing a SELECT
         //  query
         //------------------------------------------------------------------
-        public List<Object[]> getValues(string queryString)
+        public List<Object> getValues(string queryString)
         {
-            List<Object[]> results = new List<Object[]>();
+            List<Object> results = new List<Object>();
 
             configureConnection();
             using (conn)

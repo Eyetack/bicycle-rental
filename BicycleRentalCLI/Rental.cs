@@ -8,6 +8,10 @@ namespace BicycleRentalCLI
 {
     class Rental : Persistable
     {
+        /// <summary>
+        /// instance variables/ table columns
+        /// </summary>
+        
         private int _id;
         public int ID { get { return _id; } set { _id = value; } }
 
@@ -48,7 +52,21 @@ namespace BicycleRentalCLI
                 @"Data source= C:\Users\Katie\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\bicycle-rental\BicycleRentalCLI\bin\Debug" +
                 @"\BicycleRental.accdb";
         }
-        
+
+         /// <summary>
+         /// constructor
+         /// </summary>
+         /// <param name="vid">Vehicle ID</param>
+         /// <param name="rid">Renter ID</param>
+         /// <param name="drent">Date Rented</param>
+         /// <param name="trent">Time Rented</param>
+         /// <param name="dd">Date Due</param>
+         /// <param name="td">Time Due</param>
+         /// <param name="dreturn">Date Returned</param>
+         /// <param name="treturn">Time Returned</param>
+         /// <param name="checkin">Check In Worker ID</param>
+         /// <param name="checkout">Check out Worker ID</param>
+
         public Rental(int vid, int rid, string drent, string trent, string dd, string td, string dreturn, string treturn, int checkin, int checkout) : base()
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
@@ -67,10 +85,14 @@ namespace BicycleRentalCLI
             
         }
 
+        /// <summary>
+        /// populates this Rental object with a Rental entry from the Worker table in our .accdb file
+        /// </summary>
+        /// <param name="id">Auto generated ID</param>
         public void populate(int ID)
         {
             string queryString = "SELECT * FROM Rental WHERE (ID = " + ID + ")";
-            List<Object[]> results = getValues(queryString);
+            List<Object> results = getValues(queryString);
             if (results != null)
             {
                 foreach (Object[] result in results)
@@ -109,6 +131,11 @@ namespace BicycleRentalCLI
             }
         }
         //------------------------------------------------------------------
+
+        /// <summary>
+        /// Inserts an entry into the Rental table in our .accdb file
+        /// </summary>
+        
         public void insert()
         {
 
@@ -134,7 +161,7 @@ namespace BicycleRentalCLI
             {
                 Console.WriteLine("Rental object successfully inserted");
                 string idQueryString = "SELECT MAX(ID) FROM Rental";
-                List<Object[]> results = getValues(idQueryString);
+                List<Object> results = getValues(idQueryString);
                 if (results != null)
                 {
 
@@ -153,6 +180,11 @@ namespace BicycleRentalCLI
             }
         }
         //------------------------------------------------------------------
+
+        /// <summary>
+        /// updates a single entry in the Rental table in our .accdb file
+        /// </summary>
+        
         public void update()
         {
             string updateQuery = "UPDATE Rental SET " +
@@ -175,6 +207,11 @@ namespace BicycleRentalCLI
                 Console.WriteLine("Rental object successfully updated");
         }
         //------------------------------------------------------------------
+
+        /// <summary>
+        /// deletes a single entry in the Rental table in our .accdb file.
+        /// </summary>
+        
         public void delete()
         {
             string deleteQuery = "DELETE FROM Rental WHERE " +
@@ -186,6 +223,23 @@ namespace BicycleRentalCLI
                 Console.WriteLine("Rental object successfully deleted");
         }
         //------------------------------------------------------------------
+        /// <summary>
+        /// toString function for Rental for output
+        /// </summary>
+        public void toString()
+        {
+            Console.WriteLine(this.ID);
+            Console.WriteLine(this.VehicleID);
+            Console.WriteLine(this.RenterID);
+            Console.WriteLine(this.DateRented);
+            Console.WriteLine(this.TimeRented);
+            Console.WriteLine(this.DateDue);
+            Console.WriteLine(this.TimeDue);
+            Console.WriteLine(this.DateReturned);
+            Console.WriteLine(this.TimeReturned);
+            Console.WriteLine(this.CheckoutWorkerID);
+            Console.WriteLine(this.CheckInWorkerID);
 
+        }
     }
 }
