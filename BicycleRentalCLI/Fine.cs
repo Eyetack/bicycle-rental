@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BicycleRentalCLI
 {
-    class Fine
+    public class Fine : Persistable
     {
         private int _id;
         public int ID
@@ -58,6 +58,16 @@ namespace BicycleRentalCLI
             this.DateFineImposed = dfi;
             this.Status = stat;
             this.DateStatusUpdated = dsu;
+        }
+
+        public Fine()
+        {
+            this.ID = -1;
+            this.BorrowerID = -1 ;
+            this.FineAmount = 0.0;
+            this.DateFineImposed = "mm-dd-yyyy";
+            this.Status = "";
+            this.DateStatusUpdated = "";
         }
     }
 }

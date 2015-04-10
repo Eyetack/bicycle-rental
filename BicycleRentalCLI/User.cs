@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BicycleRentalCLI
 {
-    class User : Persistable
+    public class User : Persistable
     {
         /// <summary>
         /// instance variables/ table columns
@@ -67,6 +67,20 @@ namespace BicycleRentalCLI
             this.Notes = note;
             this.Status = st;
             this.DateStatusUpdated = dstu;
+        }
+
+        public User()
+        {
+            this.ID = -1;
+            this.BannerID = -1;
+            this.FirstName = "";
+            this.LastName = "";
+            this.PhoneNumber = "xxx-xxx-xxxx";
+            this.EmailAddress = "";
+            this.UserType = "";
+            this.Notes = "";
+            this.Status = "";
+            this.DateStatusUpdated = "";
         }
     }
 }

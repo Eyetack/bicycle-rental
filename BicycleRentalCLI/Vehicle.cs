@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BicycleRentalCLI
 {
-    class Vehicle : Persistable
+    public class Vehicle : Persistable
     {
         private int _id;
         public int ID { get { return _id; } set { _id = value; } }
@@ -69,6 +69,21 @@ namespace BicycleRentalCLI
             this.Notes = note;
             this.Status = st;
             this.DateStatusUpdated = dstu;
+        }
+
+        public Vehicle()
+        {
+            this.ID =  -1;
+            this.BikeMake = "";
+            this.ModelNumber =  "";
+            this.SerialNumber = "";
+            this.Color = "";
+            this.Description = "";
+            this.Location = "";
+            this.PhysicalCondition = "";
+            this.Notes = "";
+            this.Status = "";
+            this.DateStatusUpdated = "";
         }
     }
 }
