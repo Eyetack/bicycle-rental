@@ -8,6 +8,9 @@ namespace BicycleRentalCLI
 {
     public class Vehicle : Persistable
     {
+        /// <summary>
+        /// instance variables/properties of each Vehicle entry
+        /// </summary>
         private int _id;
         public int ID { get { return _id; } set { _id = value; } }
 
@@ -58,6 +61,9 @@ namespace BicycleRentalCLI
         public Vehicle(int auid, string bm, string mdnum, string sernum, string color, string desc, string locn,
             string phy_cond, string note, string st, string dstu)
         {
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
+                 @"\BicycleRental.accdb";
             this.ID = auid;
             this.BikeMake = bm;
             this.ModelNumber = mdnum;

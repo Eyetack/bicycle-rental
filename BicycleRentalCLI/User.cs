@@ -57,6 +57,9 @@ namespace BicycleRentalCLI
         public User(int auid, int bid, string f, string l, string pn, string em, string ut,
             string note, string st, string dstu)
         {
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
+                 @"\BicycleRental.accdb";
             this.ID = auid;
             this.BannerID = bid;
             this.FirstName = f;
@@ -70,11 +73,119 @@ namespace BicycleRentalCLI
         }
 
         //default constructor
-        public User()
+        public User() : base()
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
+        }
+
+        /// <summary>
+        /// retrieves all the User entries from the Vehicle table in our .accdb file
+        /// </summary>
+        /// <param name="id">Auto generated ID</param>
+        public void populate(int id)
+        {
+            string queryString = "SELECT * FROM [User] WHERE (ID = " + id + ")";
+            List<Object> results = getValues(queryString);
+            if (results != null)
+            {
+                foreach (object result in results)
+                {
+                    IEnumerable<Object> row = result as IEnumerable<Object>;
+                    int count = 0;
+                    foreach (object rowValue in row)
+                    {
+                        // DEBUG Console.WriteLine(rowValue);
+                        if (count == 0) this.ID = Convert.ToInt32(rowValue);
+                        else if (count == 1) this.BannerID = Convert.ToInt32(rowValue);
+                        else if (count == 2) this.FirstName = Convert.ToString(rowValue);
+                        else if (count == 3) this.LastName = Convert.ToString(rowValue);
+                        else if (count == 4) this.PhoneNumber = Convert.ToString(rowValue);
+                        else if (count == 5) this.EmailAddress = Convert.ToString(rowValue);
+                        else if (count == 6) this.UserType = Convert.ToString(rowValue);
+                        else if (count == 7) this.Notes = Convert.ToString(rowValue);
+                        else if (count == 8) this.Status = Convert.ToString(rowValue);
+                        else if (count == 9) this.DateStatusUpdated = Convert.ToString(rowValue);
+                        count = count + 1;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Inserts an entry into the User table in our .accdb file
+        /// </summary>
+        public void insert()
+        {
+            string insertQuery =
+                "INSERT INTO [User] (BannerID, FirstName, LastName, PhoneNumber, EmailAddress, UserType, Notes, Status, DateStatusUpdated)" +
+                "VALUES (" +
+                "'" + this.BannerID + "', '" +
+                this.FirstName + "', '" +
+                this.LastName + "', '" +
+                this.PhoneNumber + "', '" +
+                this.EmailAddress + "', '" +
+                this.UserType + "', '" +
+                this.Notes + "', '" +
+                this.Status + "', '" +
+                this.DateStatusUpdated + "')";
+            int returnCode = modifyDatabase(insertQuery);
+            if (returnCode != 0) Console.WriteLine("Error in inserting User object into db!");
+            else
+            {
+                Console.WriteLine("User object successfully created!");
+                string idQueryString = "SELECT MAX(ID) FROM [User]";
+                List<Object> results = getValues(idQueryString);
+                if (results != null)
+                {
+                    // DEBUG Console.WriteLine("Got an id from id query");
+                    foreach (object result in results)
+                    {
+                        IEnumerable<Object> row = result as IEnumerable<Object>;
+                        foreach (object rowValue in row)
+                        {
+                            this.ID = Convert.ToInt32(rowValue);
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// updates a single entry in the User table in our .accdb file
+        /// </summary>
+        public void update()
+        {
+            string updateQuery = "UPDATE [User] SET " +
+                " BannerID = '" + this.BannerID + "' , " +
+                " FirstName = '" + this.FirstName + "' , " +
+                " LastName = '" + this.LastName + "' , " +
+                " PhoneNumber = '" + this.PhoneNumber + "' , " +
+                " EmailAddress '" + this.EmailAddress + "' , " +
+                " UserType '" + this.UserType + "' , " +
+                " Notes '" + this.Notes + "' , " +
+                " Status = '" + this.Status + "' " +
+                " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
+                " WHERE " +
+                " ID = " + this.ID;
+            Console.WriteLine(updateQuery);
+            int returnCode = modifyDatabase(updateQuery);
+            if (returnCode != 0) Console.WriteLine("Error in updating User object in db.");
+            else Console.WriteLine("User object successfully updated!");
+        }
+
+        /// <summary>
+        /// deletes a single entry in the User table in our .accdb file. 
+        /// </summary>
+        public void delete()
+        {
+            string deleteQuery = "DELETE FROM [User] WHERE " +
+                " ID = " + this.ID;
+            Console.WriteLine(deleteQuery);
+            int returnCode = modifyDatabase(deleteQuery);
+            if (returnCode != 0) Console.WriteLine("Error in deleting User object in db.");
+            else Console.WriteLine("User object successfully deleted!");
         }
     }
 }

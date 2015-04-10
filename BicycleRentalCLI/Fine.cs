@@ -52,6 +52,9 @@ namespace BicycleRentalCLI
 
         public Fine(int id, int bid, double fa, string dfi, string stat, string dsu)
         {
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
+                 @"\BicycleRental.accdb";
             this.ID = id;
             this.BorrowerID = bid;
             this.FineAmount = fa;
