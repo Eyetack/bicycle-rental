@@ -76,7 +76,6 @@ namespace BicycleRentalCLI
             //</UserTesting>
 
             //<FineTesting>
-            //(int id, int bid, double fa, string dfi, string stat, string dsu)
             Fine f = new Fine(1, 800112358, 5.50, "2015-02-30", "Active", "2015-03-02");
             //.insert() test
             Console.WriteLine("Starting .insert() test for Fine class");
@@ -101,6 +100,54 @@ namespace BicycleRentalCLI
             f.delete(); //<-- Uncomment this before testing
             Console.WriteLine("Ending .delete() test for Fine Class\n\n");
             //</FineTesting>*/
+
+            //<WorkerTesting>
+            Worker w = new Worker("800490178", "Katie", "Littlefield", "585-555-5555", "kl@gmail.com", "Admin", "2015-04-07", "apple", "Good Worker", "Valid", "2015-04-07");
+            Console.WriteLine("Starting .insert() test for Worker class");
+            w.insert();
+            Console.WriteLine("Ending .insert() test for Worker class");
+            Console.WriteLine("Starting .populate() test for Worker class");
+            w.populate(4);
+            Console.WriteLine("Ending .populate() test for Worker class");
+            Console.WriteLine("BannerID: " +w.BannerID);
+            Console.WriteLine("FirstName: "+w.FirstName);
+            Console.WriteLine("LastName: "+w.LastName);
+            Console.WriteLine("PhoneNumber: "+w.PhoneNumber);
+            Console.WriteLine("EmailAddress: "+w.EmailAddress);
+            Console.WriteLine("Credential: "+w.Credential);
+            Console.WriteLine("InitialRegistrationDate:" +w.InitialRegistrationDate);
+            Console.WriteLine("WorkerPassword: "+w.WorkerPassword);
+            Console.WriteLine("Notes: "+w.Notes);
+            Console.WriteLine("Status: "+w.Status);
+            Console.WriteLine("DateStatusUpdated: " +w.DateStatusUpdated);
+            Console.WriteLine("Starting .update() test for Worker class");
+            w.Status = "Invalid";
+            w.update();
+            Console.WriteLine("Ending .update() test for Worker class");
+            Console.WriteLine("Starting .delete() test for Worker class");
+            w.delete();
+            Console.
+            //</WorkerTesting>
+
+            //<RentalTesting>
+            Rental r = new Rental(1, 1, "2015-04-07", "1:30", "2015-04-14", "1:30", "", "", 0, 2);
+            r.insert();
+            r.populate(1);
+            Console.WriteLine(r.VehicleID);
+            Console.WriteLine(r.RenterID);
+            Console.WriteLine(r.DateRented);
+            Console.WriteLine(r.TimeRented);
+            Console.WriteLine(r.DateDue);
+            Console.WriteLine(r.TimeDue);
+            Console.WriteLine(r.DateReturned);
+            Console.WriteLine(r.TimeReturned);
+            Console.WriteLine(r.CheckoutWorkerID);
+            Console.WriteLine(r.CheckInWorkerID);
+            r.DateDue = "2015-04-20";
+            r.update();
+            r.delete();
+            //</RentalTesting>
+
 
             //<VehicleCollectionTesting>
             Console.WriteLine("Starting test for VehicleCollection class");
