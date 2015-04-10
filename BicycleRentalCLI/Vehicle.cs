@@ -71,19 +71,120 @@ namespace BicycleRentalCLI
             this.DateStatusUpdated = dstu;
         }
 
+        //default constructor
         public Vehicle()
         {
-            this.ID =  -1;
-            this.BikeMake = "";
-            this.ModelNumber =  "";
-            this.SerialNumber = "";
-            this.Color = "";
-            this.Description = "";
-            this.Location = "";
-            this.PhysicalCondition = "";
-            this.Notes = "";
-            this.Status = "";
-            this.DateStatusUpdated = "";
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
+                @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
+                @"\BicycleRental.accdb";
+        }
+
+        /// <summary>
+        /// retrieves all the Vehicle entries from the Vehicle table in our .accdb file
+        /// </summary>
+        /// <param name="id">Auto generated ID</param>
+        public void populate(int id)
+        {
+            string queryString = "SELECT * FROM Vehicle WHERE (ID = " + id + ")";
+            List<Object> results = getValues(queryString);
+            if (results != null)
+            {
+                foreach (object result in results)
+                {
+                    IEnumerable<Object> row = result as IEnumerable<Object>;
+                    int count = 0;
+                    foreach (object rowValue in row)
+                    {
+                        // DEBUG Console.WriteLine(rowValue);
+                        if (count == 0) this.ID = Convert.ToInt32(rowValue);
+                        else if (count == 1) this.BikeMake = Convert.ToString(rowValue);
+                        else if (count == 2) this.ModelNumber = Convert.ToString(rowValue);
+                        else if (count == 3) this.SerialNumber = Convert.ToString(rowValue);
+                        else if (count == 4) this.Color = Convert.ToString(rowValue);
+                        else if (count == 5) this.Description = Convert.ToString(rowValue);
+                        else if (count == 6) this.Location = Convert.ToString(rowValue);
+                        else if (count == 7) this.PhysicalCondition = Convert.ToString(rowValue);
+                        else if (count == 8) this.Notes = Convert.ToString(rowValue);
+                        else if (count == 9) this.Status = Convert.ToString(rowValue);
+                        else if (count == 10) this.DateStatusUpdated = Convert.ToString(rowValue);
+                        count = count + 1;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Inserts an entry into the Vehicle table in our .accdb file
+        /// </summary>
+        public void insert()
+        {
+            string insertQuery =
+                "INSERT INTO Vehicle (BikeMake, ModelNumber, SerialNumber, Color, Description, Location, PhysicalCondition, Notes, Status, DateStatusUpdated)" +
+                "VALUES (" +
+                "'" + this.BikeMake + "', '" +
+                this.ModelNumber + "', '" +
+                this.SerialNumber + "', '" +
+                this.Color + "', '" +
+                this.Description + "', '" +
+                this.Location + "', '" +
+                this.PhysicalCondition + "', '" +
+                this.Notes + "', '" +
+                this.Status + "', '" +
+                this.DateStatusUpdated + "')";
+            int returnCode = modifyDatabase(insertQuery);
+            if (returnCode != 0) Console.WriteLine("Error in inserting Vehicle object into db!");
+            else
+            {
+                Console.WriteLine("Vehicle object successfully created!");
+                string idQueryString = "SELECT MAX(ID) FROM Vehicle";
+                List<Object> results = getValues(idQueryString);
+                if (results != null)
+                {
+                    // DEBUG Console.WriteLine("Got an id from id query");
+                    foreach (object result in results)
+                    {
+                        IEnumerable<Object> row = result as IEnumerable<Object>;
+                        foreach (object rowValue in row)
+                        {
+                            this.ID = Convert.ToInt32(rowValue);
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// updates a single entry in the Vehicle table in our .accdb file
+        /// </summary>
+        public void update()
+        {
+            string updateQuery = "UPDATE Vehicle SET " +
+                " BikeMake = '" + this.BikeMake + "' , " +
+                " ModelNumber = '" + this.ModelNumber + "' , " +
+                " SerialNumber = '" + this.SerialNumber + "' , " +
+                " Color = '" + this.Color + "' , " +
+                " Description '" + this.Description + "' , " +
+                " Location '" + this.Location + "' , " +
+                " PhysicalCondition '" + this.PhysicalCondition + "' , " +
+                " Notes = '" + this.Notes + "' " +
+                " Status = '" + this.Status + "' " +
+                " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
+                " WHERE " +
+                " ID = " + this.ID;
+            Console.WriteLine(updateQuery);
+            int returnCode = modifyDatabase(updateQuery);
+            if (returnCode != 0) Console.WriteLine("Error in updating Vehicle object in db.");
+            else Console.WriteLine("Vehicle object successfully updated!");
+        }
+
+        public void delete()
+        {
+            string deleteQuery = "DELETE FROM Vehicle WHERE " +
+                " ID = " + this.ID;
+            Console.WriteLine(deleteQuery);
+            int returnCode = modifyDatabase(deleteQuery);
+            if (returnCode != 0) Console.WriteLine("Error in deleting Vehicle object in db.");
+            else Console.WriteLine("Vehicle object successfully deleted!");
         }
     }
 }

@@ -60,14 +60,12 @@ namespace BicycleRentalCLI
             this.DateStatusUpdated = dsu;
         }
 
-        public Fine()
+        //default constructor
+        public Fine() : base()
         {
-            this.ID = -1;
-            this.BorrowerID = -1 ;
-            this.FineAmount = 0.0;
-            this.DateFineImposed = "mm-dd-yyyy";
-            this.Status = "";
-            this.DateStatusUpdated = "";
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+                @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
+                @"\BicycleRental.accdb";
         }
     }
 }

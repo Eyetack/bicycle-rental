@@ -69,18 +69,12 @@ namespace BicycleRentalCLI
             this.DateStatusUpdated = dstu;
         }
 
+        //default constructor
         public User()
         {
-            this.ID = -1;
-            this.BannerID = -1;
-            this.FirstName = "";
-            this.LastName = "";
-            this.PhoneNumber = "xxx-xxx-xxxx";
-            this.EmailAddress = "";
-            this.UserType = "";
-            this.Notes = "";
-            this.Status = "";
-            this.DateStatusUpdated = "";
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
+                 @"\BicycleRental.accdb";
         }
     }
 }
