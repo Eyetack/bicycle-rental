@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Programmers: Katie Littlefield and Lior Shahverdi
 namespace BicycleRentalCLI
 {
     public class Fine : Persistable
@@ -148,7 +149,7 @@ namespace BicycleRentalCLI
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
                 " ID = " + this.ID;
-            Console.WriteLine(updateQuery);
+            //Console.WriteLine(updateQuery);
             int returnCode = modifyDatabase(updateQuery);
             if (returnCode != 0) Console.WriteLine("Error in updating Fine object in db.");
             else Console.WriteLine("Fine object successfully updated!");
@@ -161,7 +162,7 @@ namespace BicycleRentalCLI
         {
             string deleteQuery = "DELETE FROM Fine WHERE " +
                 " ID = " + this.ID;
-            Console.WriteLine(deleteQuery);
+            //Console.WriteLine(deleteQuery);
             int returnCode = modifyDatabase(deleteQuery);
             if (returnCode != 0) Console.WriteLine("Error in deleting Fine object in db.");
             else Console.WriteLine("Fine object successfully deleted!");

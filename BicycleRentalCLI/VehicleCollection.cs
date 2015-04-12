@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Programmers: Katie Littlefield and Lior Shahverdi
 namespace BicycleRentalCLI
 {
     class VehicleCollection : Persistable
     {
         public List<Vehicle> bikes;
-        
-        public VehicleCollection() : base()
+
+        //parameterless constructor
+        public VehicleCollection()
+            : base()// call parent default constructor
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
@@ -20,33 +22,22 @@ namespace BicycleRentalCLI
             populateWithGoodAndActiveBikes();
         }
 
+        /// <summary>
+        /// populates this VehicleCollection object with Vehicle entries from the Vehicle table in our .accdb file
+        /// </summary>
         public void populateWithGoodAndActiveBikes()
         {
             string queryString = "SELECT * FROM Vehicle WHERE (PhysicalCondition = 'Good') AND (Status = 'Active')";
             List<Object> results = getValues(queryString);
             if (results != null)
             {
-                foreach (object result in results)
+                foreach (Object[] result in results)
                 {
                     IEnumerable<Object> row = result as IEnumerable<Object>;
+
+                    int nextBikeID = (int)row.ElementAt(0);
                     Vehicle nv = new Vehicle();
-                    int count = 0;
-                    foreach (object rowValue in row)
-                    {
-                        //DEBUG Console.WriteLine(rowValue);
-                        if (count == 0) nv.ID = Convert.ToInt32(rowValue);
-                        else if (count == 1) nv.BikeMake = Convert.ToString(rowValue);
-                        else if (count == 2) nv.ModelNumber = Convert.ToString(rowValue);
-                        else if (count == 3) nv.SerialNumber = Convert.ToString(rowValue);
-                        else if (count == 4) nv.Color = Convert.ToString(rowValue);
-                        else if (count == 5) nv.Description = Convert.ToString(rowValue);
-                        else if (count == 6) nv.Location = Convert.ToString(rowValue);
-                        else if (count == 7) nv.PhysicalCondition = Convert.ToString(rowValue);
-                        else if (count == 8) nv.Notes = Convert.ToString(rowValue);
-                        else if (count == 9) nv.Status = Convert.ToString(rowValue);
-                        else if (count == 10) nv.DateStatusUpdated = Convert.ToString(rowValue);
-                        count++;
-                    }
+                    nv.populate(nextBikeID);
                     bikes.Add(nv);
                 }
             }

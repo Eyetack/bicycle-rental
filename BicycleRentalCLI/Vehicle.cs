@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Programmers: Katie Littlefield and Lior Shahverdi
 namespace BicycleRentalCLI
 {
     public class Vehicle : Persistable
@@ -59,7 +59,7 @@ namespace BicycleRentalCLI
         /// <param name="st">Status</param>
         /// <param name="dstu">Date Status Updated</param>
         public Vehicle(string bm, string mdnum, string sernum, string color, string desc, string locn,
-            string phy_cond, string note, string st, string dstu)
+            string phy_cond, string note)
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
@@ -72,8 +72,8 @@ namespace BicycleRentalCLI
             this.Location = locn;
             this.PhysicalCondition = phy_cond;
             this.Notes = note;
-            this.Status = st;
-            this.DateStatusUpdated = dstu;
+            this.Status = "Active";
+            this.DateStatusUpdated = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         //default constructor
@@ -85,7 +85,7 @@ namespace BicycleRentalCLI
         }
 
         /// <summary>
-        /// retrieves all the Vehicle entries from the Vehicle table in our .accdb file
+        /// Populates the Vehicle object with a Vehicle entry from the Vehicle table in our .accdb file
         /// </summary>
         /// <param name="id">Auto generated ID</param>
         public void populate(int id)
@@ -193,7 +193,7 @@ namespace BicycleRentalCLI
             else Console.WriteLine("Vehicle object successfully deleted!");
         }
 
-        public string ToString() { 
+        public override string ToString() { 
             return "ID="+this.ID+" BikeMake="+this.BikeMake+" ModelNumber="+this.ModelNumber+
                 " SerialNumber="+this.SerialNumber+ " Color="+this.Color+" Description="+this.Description+
                 " Location="+this.Location+ " PhysicalCondition="+this.PhysicalCondition+" Notes="+this.Notes+

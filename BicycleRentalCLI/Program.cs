@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Programmers: Katie Littlefield and Lior Shahverdi
+
 namespace BicycleRentalCLI
 {
     class Program
@@ -12,8 +14,8 @@ namespace BicycleRentalCLI
         {
 
             //<VehicleTesting>
-            Vehicle v = new Vehicle("Schwinn", "5813", "SCH58", "Red", "Classy", "Welcome Center", "Good", "-", "Active", "2015-10-02");
-            Vehicle v1 = new Vehicle("Huffy", "7878", "H78A8", "Blue", "Dark", "Seymour Union", "Okay", "-", "Active", "2015-07-02"); 
+            Vehicle v = new Vehicle("Schwinn", "5813", "SCH58", "Red", "Classy", "Welcome Center", "Good", "-");
+            Vehicle v1 = new Vehicle("Huffy", "7878", "H78A8", "Blue", "Dark", "Seymour Union", "Okay", "-"); 
             //.insert() test
             Console.WriteLine("Starting .insert() test for Vehicle class ------------------------");
             v.insert();
@@ -46,7 +48,7 @@ namespace BicycleRentalCLI
 
             //<UserTesting>
             //(int bid, string f, string l, string pn, string em, string ut, string note, string st, string dstu)
-            User u = new User(800111222, "Lenny", "John", "585-395-5151", "rich@poor.com", "Student", "My notes", "Active", "2015-01-30");
+            User u = new User(800111222, "Lenny", "John", "585-395-5151", "rich@poor.com", "Student", "My notes");
             //.insert() test
             Console.WriteLine("Starting .insert() test for User class");
             u.insert();
@@ -105,12 +107,54 @@ namespace BicycleRentalCLI
             //<VehicleCollectionTesting>
             Console.WriteLine("Starting test for VehicleCollection class");
             VehicleCollection vc = new VehicleCollection();
+            Console.WriteLine("Ending test for VehicleCollection class\n\n");
+
+            //<RentalTesting>
+            Rental r = new Rental(1, 1, "2015-04-07", "1:30", "2015-04-14", "1:30", "", "", 0, 2);
+            Console.WriteLine("Starting .insert() test for Rental class");
+            r.insert();
+            Console.WriteLine("Ending .insert() test for Rental class");
+            Console.WriteLine("Starting .populate() test for Rental class");
+            r.populate(1);
+            Console.WriteLine("Ending .populate() test for Rental class");
+            r.ToString();
+            Console.WriteLine("Starting .update() test for Rental class");
+            r.DateDue = "2015-04-20";
+            r.update();
+            Console.WriteLine("Ending .populate() test for Rental class");
+            Console.WriteLine("Starting .delete() test for Rental class");
+            r.delete();
+            Console.WriteLine("Ending .delete() test for Rental class\n\n");
+            //</RentalTesting>
+            
+            //<WorkerTesting>
+            Worker w = new Worker("800490178", "Katie", "Littlefield", "585-555-5555", "kl@gmail.com", "Admin", "2015-04-07", "apple", "Good Worker");
+            Console.WriteLine("Starting .insert() test for Worker class");
+            w.insert();
+            Console.WriteLine("Ending .insert() test for Worker class");
+            Console.WriteLine("Starting .populate() test for Worker class");
+            w.populate(1);
+            Console.WriteLine("Ending .populate() test for Worker class");
+            w.ToString();
+            Console.WriteLine("Starting .update() test for Worker class");
+            w.Status = "Invalid";
+            w.update();
+            Console.WriteLine("Ending .update() test for Worker class");
+            Console.WriteLine("Starting .delete() test for Worker class");
+            w.delete();
+            Console.WriteLine("Ending .delete() test for Worker class\n\n");
+            //</WorkerTesting>
+
+            //<RentalCollectionTesting>
+            RentalCollection rc = new RentalCollection();
+            Console.WriteLine("Starting test for RentalCollection class");
+            rc.populateWithRentedOutBikes();
+            rc.ToString();
             Console.WriteLine("Ending test for VehicleCollection class");
-
-
-
+            //</RentalCollectionTesting>
 
             Console.ReadLine();
         }
     }
 }
+//database provided by request.

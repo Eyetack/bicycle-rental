@@ -1,0 +1,100 @@
+Starting .insert() test for Vehicle class ------------------------
+Vehicle object successfully created!
+Got an id from id query
+Vehicle object successfully created!
+Got an id from id query
+Ending .insert() test for Vehicle class --------------------------
+Starting .populate() test for Vehicle class ------------------------
+Ending .populate() test for Vehicle class --------------------------
+Bike Make: Challenger
+Model Number: CR1 Pro
+Serial Number:
+Color: Black
+Description: Men bike
+Location: Seymour Union
+Physical Condition: Good
+Notes: Needs cleaning
+Status: Rented
+DateStatusUpdated: 2015-03-18
+Starting .update() test for Vehicle class ------------------------
+Vehicle object successfully updated!
+Ending .update() test for Vehicle class --------------------------
+Starting .delete() test for Vehicle class ------------------------
+Vehicle object successfully deleted!
+Ending .delete() test for Vehicle class --------------------------
+
+
+Starting .insert() test for User class
+User object successfully created!
+Ending .insert() test for User class
+Starting .populate() test for User class
+Ending .populate() test for User class
+BannerID: 800111113
+FirstName: Andrew
+LastName: Cuomo
+PhoneNumber: 585-395-2297
+EmailAddress: acuomo@brockport.edu
+UserType: Faculty/Staff
+Notes: Cash only customer
+Status: Active
+DateStatusUpdated: 2015-03-18
+Starting .update() test for User class
+User object successfully updated!
+Ending .update() test for User class
+Starting .delete() test for User Class
+User object successfully deleted!
+Ending .delete() test for User Class
+
+
+Starting .insert() test for Fine class
+Fine object successfully created!
+Ending .insert() test for Fine class
+Starting .populate() test for Fine class
+Ending .populate() test for Fine class
+BorrowerID: 800112358
+FineAmount: 5.5
+DateFineImposed: 2015-02-30
+Status: Active
+DateStatusUpdated: 2015-03-18
+Starting .update() test for Fine class
+Fine object successfully updated!
+Ending .update() test for Fine class
+Starting .delete() test for Fine Class
+Fine object successfully deleted!
+Ending .delete() test for Fine Class
+
+
+Starting test for VehicleCollection class
+Size of Collection ->2
+Ending test for VehicleCollection class
+
+
+Starting .insert() test for Rental class
+Rental object successfully inserted
+Ending .insert() test for Rental class
+Starting .populate() test for Rental class
+Ending .populate() test for Rental class
+Starting .update() test for Rental class
+Rental object successfully updated
+Ending .populate() test for Rental class
+Starting .delete() test for Rental class
+Rental object successfully deleted
+Ending .delete() test for Rental class
+
+
+Starting .insert() test for Worker class
+Worker object successfully inserted
+Ending .insert() test for Worker class
+Starting .populate() test for Worker class
+Ending .populate() test for Worker class
+Starting .update() test for Worker class
+Worker object successfully updated
+Ending .update() test for Worker class
+Starting .delete() test for Worker class
+Worker object successfully deleted
+Ending .delete() test for Worker class
+
+
+Starting test for RentalCollection class
+Size of Collection ->2
+Ending test for VehicleCollection class

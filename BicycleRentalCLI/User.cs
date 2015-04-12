@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Programmers: Katie Littlefield and Lior Shahverdi
 namespace BicycleRentalCLI
 {
     public class User : Persistable
@@ -54,7 +55,7 @@ namespace BicycleRentalCLI
         /// <param name="st">Status</param>
         /// <param name="dstu">Date Status Updated</param>
         public User(int bid, string f, string l, string pn, string em, string ut,
-            string note, string st, string dstu)
+            string note)
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
@@ -66,8 +67,8 @@ namespace BicycleRentalCLI
             this.EmailAddress = em;
             this.UserType = ut;
             this.Notes = note;
-            this.Status = st;
-            this.DateStatusUpdated = dstu;
+            this.Status = "Active";
+            this.DateStatusUpdated = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         //default constructor
@@ -79,7 +80,7 @@ namespace BicycleRentalCLI
         }
 
         /// <summary>
-        /// retrieves all the User entries from the Vehicle table in our .accdb file
+        /// Populates the User object with a User entry from the User table in our .accdb file
         /// </summary>
         /// <param name="id">Auto generated ID</param>
         public void populate(int id)
@@ -167,7 +168,7 @@ namespace BicycleRentalCLI
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
                 " (ID = " + this.ID+")";
-            Console.WriteLine(updateQuery);
+            //Console.WriteLine(updateQuery);
             int returnCode = modifyDatabase(updateQuery);
             if (returnCode != 0) Console.WriteLine("Error in updating User object in db.");
             else Console.WriteLine("User object successfully updated!");
@@ -180,7 +181,7 @@ namespace BicycleRentalCLI
         {
             string deleteQuery = "DELETE FROM [User] WHERE " +
                 " ID = " + this.ID;
-            Console.WriteLine(deleteQuery);
+            //Console.WriteLine(deleteQuery);
             int returnCode = modifyDatabase(deleteQuery);
             if (returnCode != 0) Console.WriteLine("Error in deleting User object in db.");
             else Console.WriteLine("User object successfully deleted!");
