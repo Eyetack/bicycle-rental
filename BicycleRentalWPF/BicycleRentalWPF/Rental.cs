@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 //Programmers: Katie Littlefield and Lior Shahverdi
-namespace BicycleRentalCLI
+namespace BicycleRentalWPF
 {
     class Rental : Persistable
     {
