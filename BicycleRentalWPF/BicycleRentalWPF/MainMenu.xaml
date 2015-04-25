@@ -13,7 +13,7 @@
         <Label Content="Main Menu" Grid.Column="1" HorizontalAlignment="Left" Margin="229,48,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="74"/>
         <Button x:Name="InsertUserButton" Grid.ColumnSpan="2" Content="Insert User" HorizontalAlignment="Left" Margin="77,105,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
         <Button x:Name="InsertWorkerButton" Grid.ColumnSpan="2" Content="Insert Worker" HorizontalAlignment="Left" Margin="212,105,0,0" VerticalAlignment="Top" Width="95" FontWeight="Bold"/>
-        <Button x:Name="InsertBicycleButton" Grid.ColumnSpan="2" Content="Insert Bicycle" HorizontalAlignment="Left" Margin="354,105,0,0" VerticalAlignment="Top" Width="104" FontWeight="Bold"/>
+        <Button x:Name="InsertBicycleButton" Grid.ColumnSpan="2" Content="Insert Bicycle" HorizontalAlignment="Left" Margin="352,105,0,0" VerticalAlignment="Top" Width="104" FontWeight="Bold"/>
         <Button x:Name="ModifyUserButton" Grid.ColumnSpan="2" Content="Modify User" HorizontalAlignment="Left" Margin="68,149,0,0" VerticalAlignment="Top" Width="94" FontWeight="Bold"/>
         <Button x:Name="ModifyWorkerButton" Grid.ColumnSpan="2" Content="Modify Worker" HorizontalAlignment="Left" Margin="210,149,0,0" VerticalAlignment="Top" Width="98" FontWeight="Bold"/>
         <Button x:Name="ModifyBicycleButton" Grid.ColumnSpan="2" Content="Modify Bicycle" HorizontalAlignment="Left" Margin="353,149,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold"/>

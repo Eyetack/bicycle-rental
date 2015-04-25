@@ -15,7 +15,7 @@ namespace BicycleRentalWPF
         public VehicleCollection()
             : base()// call parent default constructor
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                 @"\BicycleRental.accdb";
             this.bikes = new List<Vehicle>();

@@ -61,7 +61,7 @@ namespace BicycleRentalWPF
         public Vehicle(string bm, string mdnum, string sernum, string color, string desc, string locn,
             string phy_cond, string note)
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
             this.BikeMake = bm;
@@ -80,7 +80,7 @@ namespace BicycleRentalWPF
         public Vehicle()
             : base()
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                 @"\BicycleRental.accdb";
         }

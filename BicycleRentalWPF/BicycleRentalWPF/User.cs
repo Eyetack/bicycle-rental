@@ -57,7 +57,7 @@ namespace BicycleRentalWPF
         public User(int bid, string f, string l, string pn, string em, string ut,
             string note)
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
             this.BannerID = bid;
@@ -75,7 +75,7 @@ namespace BicycleRentalWPF
         public User()
             : base()
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
         }
