@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="InsertWorker" Height="357" Width="527">
     <Grid>
-        <Rectangle Fill="#FF85857A" HorizontalAlignment="Left" Height="326" Stroke="Black" VerticalAlignment="Top" Width="519" Margin="10,-9,-10,0"/>
+        <Rectangle Fill="#FF85857A" HorizontalAlignment="Left" Height="326" Stroke="Black" VerticalAlignment="Top" Width="519" Margin="-1,1,0,-1"/>
         <Label x:Name="Title" Content="Brockport Bicycle Rental Program" HorizontalAlignment="Left" Margin="150,10,0,0" VerticalAlignment="Top" Height="43" Width="228"/>
         <Button Content="Cancel" HorizontalAlignment="Left" Margin="393,259,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Submit" HorizontalAlignment="Left" Margin="125,259,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.096,0.614" Click="Button_Click"/>
