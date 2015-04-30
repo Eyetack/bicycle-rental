@@ -86,7 +86,7 @@ namespace BicycleRentalWPF
         /// <param name="id">Auto generated ID</param>
         public void populate(int id)
         {
-            string queryString = "SELECT * FROM [User] WHERE (ID = " + id + ")";
+            string queryString = "SELECT * FROM [User] WHERE (BannerID = " + id + ")";
             List<Object> results = getValues(queryString);
             if (results != null)
             {
