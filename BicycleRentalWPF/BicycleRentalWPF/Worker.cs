@@ -93,7 +93,7 @@ namespace BicycleRentalWPF
         /// <param name="id">Auto generated ID</param>
         public void populate(int ID)
         {
-            string queryString = "SELECT * FROM Worker WHERE (ID = " + ID + ")";
+            string queryString = "SELECT * FROM Worker WHERE (BannerId = '" + ID + "')";
             List<Object> results = getValues(queryString);
             if (results != null)
             {
@@ -222,7 +222,7 @@ namespace BicycleRentalWPF
         public void delete()
         {
             string deleteQuery = "DELETE FROM Worker WHERE " +
-                " ID = " + this.ID;
+                " (BannerId = '" + this.BannerID +"')";
             int returnCode = modifyDatabase(deleteQuery);
             if (returnCode != 0)
                 Console.WriteLine("Error in deleting Worker object from database");

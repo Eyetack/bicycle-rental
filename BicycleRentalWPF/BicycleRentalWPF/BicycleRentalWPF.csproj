@@ -53,15 +53,73 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DeleteUser.xaml.cs">
+      <DependentUpon>DeleteUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteWorker.xaml.cs">
+      <DependentUpon>DeleteWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InsertBicycle.xaml.cs">
+      <DependentUpon>InsertBicycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InsertUser.xaml.cs">
+      <DependentUpon>InsertUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InsertWorker.xaml.cs">
       <DependentUpon>InsertWorker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModifyBicycle.xaml.cs">
+      <DependentUpon>ModifyBicycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyUser.xaml.cs">
+      <DependentUpon>ModifyUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyWorker.xaml.cs">
+      <DependentUpon>ModifyWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentABicycle.xaml.cs">
+      <DependentUpon>RentABicycle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Rental.cs" />
     <Compile Include="RentalCollection.cs" />
+    <Compile Include="ReturnABicycle.xaml.cs">
+      <DependentUpon>ReturnABicycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDeleteUser.xaml.cs">
+      <DependentUpon>SearchDeleteUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDeleteWorker.xaml.cs">
+      <DependentUpon>SearchDeleteWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchModifyBicycle.xaml.cs">
+      <DependentUpon>SearchModifyBicycle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchModifyUser.xaml.cs">
+      <DependentUpon>SearchModifyUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchModifyWorker.xaml.cs">
+      <DependentUpon>SearchModifyWorker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleCollection.cs" />
     <Compile Include="Worker.cs" />
+    <Page Include="DeleteUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InsertBicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InsertUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InsertWorker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +143,46 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifyBicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModifyWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentABicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReturnABicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchDeleteUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchDeleteWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchModifyBicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchModifyUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchModifyWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Persistable.cs" />

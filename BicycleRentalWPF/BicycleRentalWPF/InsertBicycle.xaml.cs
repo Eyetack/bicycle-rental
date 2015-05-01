@@ -23,5 +23,39 @@ namespace BicycleRentalWPF
         {
             InitializeComponent();
         }
+
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            string bikeMakeText = BikeMakeTextBox.Text;
+            string modelNumberText = ModelNumberTextBox.Text;
+            string serialNumberText = SerialNumberTextBox.Text;
+            string colorText = ColorTextBox.Text;
+            string descriptionText = DescriptionTextBox.Text;
+            string locationText = LocationTextBox.Text;
+            string physicalConditionText = PhysicalConditionTextBox.Text;
+            string notesText = NotesTextBox.Text;
+            Vehicle newVehicle = new Vehicle(bikeMakeText, modelNumberText, serialNumberText, colorText,
+                descriptionText, locationText, physicalConditionText, notesText);
+            newVehicle.insert();
+            BikeMakeTextBox.Clear();
+            ModelNumberTextBox.Clear();
+            SerialNumberTextBox.Clear();
+            ColorTextBox.Clear();
+            DescriptionTextBox.Clear();
+            LocationTextBox.Clear();
+            PhysicalConditionTextBox.Clear();
+            NotesTextBox.Clear();
+            MessageBox.Show("Vehicle inserted successfully!");
+            this.Hide();
+            MainMenu ourMainMenu = new MainMenu();
+            ourMainMenu.Show();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu m = new MainMenu();
+            m.Show();
+            this.Hide();
+        }
     }
 }

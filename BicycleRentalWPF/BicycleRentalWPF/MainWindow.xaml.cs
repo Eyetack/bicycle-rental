@@ -29,5 +29,31 @@ namespace BicycleRentalWPF
         {
             System.Environment.Exit(0);
         }
+
+        private void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+            //login workflow here
+            Worker w = new Worker();
+            String b = BannerBox.Text;
+            String p = PasswordBox.Password;
+            
+            try
+            {
+                int banner = Convert.ToInt32(b); 
+                w.populate(banner);
+                if (w.BannerID.Equals(b) && w.WorkerPassword.Equals(p))
+                {
+                    MainMenu m = new MainMenu();
+                    m.Show();
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid ID and/or Password");
+                BannerBox.Clear();
+                PasswordBox.Clear();
+            }
+        }
     }
 }

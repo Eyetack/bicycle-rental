@@ -9,7 +9,8 @@ namespace BicycleRentalWPF
 {
     class VehicleCollection : Persistable
     {
-        public List<Vehicle> bikes;
+        private List<Vehicle> bikes;
+        public List<Vehicle> Bikes { get { return bikes; } set { this.bikes = value; } }
 
         //parameterless constructor
         public VehicleCollection()
@@ -18,7 +19,7 @@ namespace BicycleRentalWPF
             connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                 @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                 @"\BicycleRental.accdb";
-            this.bikes = new List<Vehicle>();
+            this.Bikes = new List<Vehicle>();
             populateWithGoodAndActiveBikes();
         }
 

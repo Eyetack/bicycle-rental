@@ -86,7 +86,8 @@ namespace BicycleRentalWPF
         /// <param name="id">Auto generated ID</param>
         public void populate(int id)
         {
-            string queryString = "SELECT * FROM [User] WHERE (ID = " + id + ")";
+            String b = Convert.ToString(id);
+            string queryString = "SELECT * FROM [User] WHERE (BannerId = '" + b + "')";
             List<Object> results = getValues(queryString);
             if (results != null)
             {
@@ -168,7 +169,7 @@ namespace BicycleRentalWPF
                 " Status = '" + this.Status + "', " +
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
-                " (ID = " + this.ID + ")";
+                " (ID = '" + this.ID + "')";
             //Console.WriteLine(updateQuery);
             int returnCode = modifyDatabase(updateQuery);
             if (returnCode != 0) Console.WriteLine("Error in updating User object in db.");
@@ -181,7 +182,7 @@ namespace BicycleRentalWPF
         public void delete()
         {
             string deleteQuery = "DELETE FROM [User] WHERE " +
-                " ID = " + this.ID;
+                " (BannerId = '" + this.BannerID + "')";
             //Console.WriteLine(deleteQuery);
             int returnCode = modifyDatabase(deleteQuery);
             if (returnCode != 0) Console.WriteLine("Error in deleting User object in db.");

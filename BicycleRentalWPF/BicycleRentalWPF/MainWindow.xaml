@@ -3,15 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Rectangle Fill="#FF85857A" HorizontalAlignment="Left" Height="319" Stroke="Black" VerticalAlignment="Top" Width="517"/>
+        <Rectangle Fill="#FF85857A" HorizontalAlignment="Left" Height="329" Stroke="Black" VerticalAlignment="Top" Width="527" Margin="-10,-10,0,0"/>
 
         <Label Content="Brockport Bicycle Rental System" HorizontalAlignment="Left" Margin="150,27,0,0" VerticalAlignment="Top"/>
         <Label Content="Login Screen" HorizontalAlignment="Left" Margin="208,53,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="259,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="258,184,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="259,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="PasswordBox" Margin="259,179,138,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="BannerID:" HorizontalAlignment="Left" Margin="92,113,0,0" VerticalAlignment="Top" Width="72"/>
         <Label Content="Password: " HorizontalAlignment="Left" Margin="93,179,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="SubmitButton" Content="SUBMIT" HorizontalAlignment="Left" Margin="150,245,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="SubmitButton" Content="SUBMIT" HorizontalAlignment="Left" Margin="150,245,0,0" VerticalAlignment="Top" Width="75" Click="SubmitButton_Click"/>
         <Button x:Name="ExitButton" Content="EXIT" HorizontalAlignment="Left" Margin="300,246,0,0" VerticalAlignment="Top" Width="75" Click="ExitButton_Click"/>
 
     </Grid>

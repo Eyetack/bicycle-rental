@@ -5,29 +5,24 @@
     <Grid>
         <Rectangle Fill="#FF85857A" HorizontalAlignment="Left" Height="462" Stroke="Black" VerticalAlignment="Top" Width="517"/>
         <Label x:Name="EnterDataLabel" Content="Enter New Bicycle Data" HorizontalAlignment="Left" Margin="132,-1,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Label x:Name="BikeMakeLabel" Content="Bike Make" HorizontalAlignment="Left" Margin="153,51,0,0" VerticalAlignment="Top" Width="69" FontWeight="Bold"/>
-        <TextBox x:Name="BikeMakeTextBox" HorizontalAlignment="Left" Height="23" Margin="271,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="ModelNumberLabel" Content="Model Number" HorizontalAlignment="Left" Margin="137,86,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="ModelNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="271,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="SerialNumberLabel" Content="Serial Number" HorizontalAlignment="Left" Margin="142,121,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="SerialNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="271,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="ColorLabel" Content="Color" HorizontalAlignment="Left" Margin="168,156,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="ColorTextBox" HorizontalAlignment="Left" Height="23" Margin="271,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="DescriptionLabel" Content="Description" HorizontalAlignment="Left" Margin="153,189,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Height="23" Margin="271,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="LocationLabel" Content="Location" HorizontalAlignment="Left" Margin="160,220,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="LocationTextBox" HorizontalAlignment="Left" Height="23" Margin="271,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="PhysicalConditionLabel" Content="Physical Condition" HorizontalAlignment="Left" Margin="131,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,-0.231" FontWeight="Bold"/>
-        <TextBox x:Name="PhysicalConditionTextBox" HorizontalAlignment="Left" Height="23" Margin="271,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="NotesLabel" Content="Notes" HorizontalAlignment="Left" Margin="170,302,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,-0.846" FontWeight="Bold"/>
-        <TextBox x:Name="NotesTextBox" HorizontalAlignment="Left" Height="50" Margin="271,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
-        <Label x:Name="StatusLabel" Content="Status" HorizontalAlignment="Left" Margin="170,358,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ComboBox x:Name="StatusComboBox" HorizontalAlignment="Left" Margin="271,362,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="StatusComboBox_SelectionChanged">
-            <ComboBoxItem Content="Active" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Inactive" HorizontalAlignment="Left" Width="118"/>
-        </ComboBox>
-        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="117,413,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
-        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="316,413,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold"/>
+        <Label x:Name="BikeMakeLabel" Content="Bike Make" HorizontalAlignment="Left" Margin="108,67,0,0" VerticalAlignment="Top" Width="69" FontWeight="Bold"/>
+        <TextBox x:Name="BikeMakeTextBox" HorizontalAlignment="Left" Height="23" Margin="226,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="ModelNumberLabel" Content="Model Number" HorizontalAlignment="Left" Margin="92,102,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="ModelNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="226,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="SerialNumberLabel" Content="Serial Number" HorizontalAlignment="Left" Margin="97,137,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="SerialNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="226,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="ColorLabel" Content="Color" HorizontalAlignment="Left" Margin="123,172,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="ColorTextBox" HorizontalAlignment="Left" Height="23" Margin="226,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="DescriptionLabel" Content="Description" HorizontalAlignment="Left" Margin="108,205,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Height="23" Margin="226,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LocationLabel" Content="Location" HorizontalAlignment="Left" Margin="115,236,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="LocationTextBox" HorizontalAlignment="Left" Height="23" Margin="226,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="PhysicalConditionLabel" Content="Physical Condition" HorizontalAlignment="Left" Margin="86,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.158,-0.231" FontWeight="Bold"/>
+        <TextBox x:Name="PhysicalConditionTextBox" HorizontalAlignment="Left" Height="23" Margin="226,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="NotesLabel" Content="Notes" HorizontalAlignment="Left" Margin="125,318,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,-0.846" FontWeight="Bold"/>
+        <TextBox x:Name="NotesTextBox" HorizontalAlignment="Left" Height="50" Margin="226,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="117,413,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="SubmitButton_Click"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="316,413,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="BackButton_Click"/>
 
     </Grid>
 </Window>
