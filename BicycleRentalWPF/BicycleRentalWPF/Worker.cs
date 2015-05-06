@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Programmers: Katie Littlefield and Lior Shahverdi
 namespace BicycleRentalWPF
 {
-    class Worker : Persistable
+    public class Worker : Persistable
     {
         /// <summary>
         /// instance variables/ table columns

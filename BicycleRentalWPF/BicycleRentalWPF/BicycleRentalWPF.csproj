@@ -53,6 +53,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DeleteBicycle.xaml.cs">
+      <DependentUpon>DeleteBicycle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DeleteUser.xaml.cs">
       <DependentUpon>DeleteUser.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,9 @@
     <Compile Include="ReturnABicycle.xaml.cs">
       <DependentUpon>ReturnABicycle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchDeleteBicycle.xaml.cs">
+      <DependentUpon>SearchDeleteBicycle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchDeleteUser.xaml.cs">
       <DependentUpon>SearchDeleteUser.xaml</DependentUpon>
     </Compile>
@@ -104,6 +110,10 @@
     <Compile Include="Vehicle.cs" />
     <Compile Include="VehicleCollection.cs" />
     <Compile Include="Worker.cs" />
+    <Page Include="DeleteBicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DeleteUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ReturnABicycle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchDeleteBicycle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

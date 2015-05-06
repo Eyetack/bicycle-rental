@@ -43,14 +43,21 @@ namespace BicycleRentalWPF
                 w.populate(banner);
                 if (w.BannerID.Equals(b) && w.WorkerPassword.Equals(p))
                 {
-                    MainMenu m = new MainMenu();
+                    MainMenu m = new MainMenu(w);
                     m.Show();
                     this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid ID and/or Password");
+                    BannerBox.Clear();
+                    PasswordBox.Clear();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please enter a valid ID and/or Password");
+                String et  = ex.Message;
+                MessageBox.Show("Please enter valid id and/or password");
                 BannerBox.Clear();
                 PasswordBox.Clear();
             }

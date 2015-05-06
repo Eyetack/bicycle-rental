@@ -19,9 +19,23 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class InsertBicycle : Window
     {
-        public InsertBicycle()
+        MainMenu myCaller;
+        public InsertBicycle(MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
+            PhysicalConditionTextBox.Items.Add("Good");
+            PhysicalConditionTextBox.Items.Add("Damaged");
+            LocationTextBox.Items.Add("Benedict");
+            LocationTextBox.Items.Add("Brockway");
+            LocationTextBox.Items.Add("Harmon");
+            LocationTextBox.Items.Add("McFarlane");
+            LocationTextBox.Items.Add("Mortimer");
+            LocationTextBox.Items.Add("Seymour College Union");
+            LocationTextBox.Items.Add("Thompson");
+            LocationTextBox.Items.Add("Townhomes");
+            LocationTextBox.Items.Add("Tuttle");
+            LocationTextBox.Items.Add("Welcome Center");
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
@@ -42,19 +56,15 @@ namespace BicycleRentalWPF
             SerialNumberTextBox.Clear();
             ColorTextBox.Clear();
             DescriptionTextBox.Clear();
-            LocationTextBox.Clear();
-            PhysicalConditionTextBox.Clear();
             NotesTextBox.Clear();
             MessageBox.Show("Vehicle inserted successfully!");
             this.Hide();
-            MainMenu ourMainMenu = new MainMenu();
-            ourMainMenu.Show();
+            myCaller.Show();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu m = new MainMenu();
-            m.Show();
+            myCaller.Show();
             this.Hide();
         }
     }

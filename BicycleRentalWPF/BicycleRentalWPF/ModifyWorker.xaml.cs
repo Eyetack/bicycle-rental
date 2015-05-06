@@ -19,11 +19,13 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class ModifyWorker : Window
     {
+        MainMenu myCaller;
         Worker w;
 
         //Getting the data and filling in the text boxes
-        public ModifyWorker(String b)
+        public ModifyWorker(String b, MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
             CredentialBox.Items.Add("Administrator");
             CredentialBox.Items.Add("Ordinary");
@@ -39,7 +41,7 @@ namespace BicycleRentalWPF
             EmailBox.Text = w.EmailAddress;
             CredentialBox.Text = w.Credential;
             InitialRegBox.Text = w.InitialRegistrationDate;
-            PasswordBox.Text = w.WorkerPassword;
+            PasswordBox.Password = w.WorkerPassword;
             NotesBox.Text = w.Notes;
             StatusBox.Text = w.Status;
         }
@@ -54,7 +56,7 @@ namespace BicycleRentalWPF
             String email = EmailBox.Text;
             String credential = CredentialBox.Text;
             String initialReg = InitialRegBox.Text;
-            String password = PasswordBox.Text;
+            String password = PasswordBox.Password;
             String status = StatusBox.Text;
             String notes = NotesBox.Text;
 
@@ -72,14 +74,13 @@ namespace BicycleRentalWPF
             w.update();
             MessageBox.Show("Modified Worker successfully.");
             this.Hide();
-            MainMenu ourMainMenu = new MainMenu();
-            ourMainMenu.Show();
+            myCaller.Show();
         }
 
         //Cancel button goes back to Search Worker
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchModifyWorker s = new SearchModifyWorker();
+            SearchModifyWorker s = new SearchModifyWorker(myCaller);
             s.Show();
             this.Hide();
         }

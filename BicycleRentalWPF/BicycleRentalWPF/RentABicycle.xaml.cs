@@ -20,9 +20,11 @@ namespace BicycleRentalWPF
     public partial class RentABicycle : Window
     {
         VehicleCollection ourVehicles;
+        MainMenu myCaller;
 
-        public RentABicycle()
+        public RentABicycle(MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
             ourVehicles = new VehicleCollection();
             foreach (Vehicle v in ourVehicles.Bikes)
@@ -34,13 +36,24 @@ namespace BicycleRentalWPF
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            MainMenu ourMainMenu = new MainMenu();
-            ourMainMenu.Show();
+            myCaller.Show();
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            int r = Convert.ToInt32(RenterTextBox.Text);
+            int c = Convert.ToInt32(ChooseBicycleBox.Text);
+            Rental rent = new Rental(c, r, DateTime.Now.ToString("yyyy-MM-dd"), DateTime.Now.ToString("HH-mm-ss tt"), DateTime.Now.AddDays(7).ToString("yyyy-MM-dd"), DateTime.Now.ToString("HH-mm-ss tt"), "", "", 0, Convert.ToInt32(myCaller.getWorker().BannerID));
+            rent.insert();
+            MessageBox.Show("Rental inserted successfully");
+            String id = ChooseBicycleBox.Text;
+            Vehicle v = new Vehicle("", "", "", "", "", "", "", "");
+            int vid = Convert.ToInt32(id);
+            v.populate(vid);
+            v.Status = "Rented";
+            v.update();
+            this.Hide();
+            myCaller.Show();
         }
 
     }

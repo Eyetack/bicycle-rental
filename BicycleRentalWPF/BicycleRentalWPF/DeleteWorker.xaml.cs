@@ -20,10 +20,12 @@ namespace BicycleRentalWPF
     public partial class DeleteWorker : Window
     {
         Worker w;
+        MainMenu myCaller;
 
         //Getting the data and filling the text boxes 
-        public DeleteWorker(String b)
+        public DeleteWorker(String b, MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
 
             CredentialBox.Items.Add("Administrator");
@@ -41,7 +43,7 @@ namespace BicycleRentalWPF
             EmailBox.Text = w.EmailAddress;
             CredentialBox.Text = w.Credential;
             InitialRegBox.Text = w.InitialRegistrationDate;
-            PasswordBox.Text = w.WorkerPassword;
+            PasswordBox.Password = w.WorkerPassword;
             StatusBox.Text = w.Status;
             StatusUpdatedBox.Text = w.DateStatusUpdated;
             NotesBox.Text = w.Notes;
@@ -50,6 +52,7 @@ namespace BicycleRentalWPF
         //Submit button deletes worker
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
+            
             w.delete();
             MessageBox.Show("Worker deleted successfully.");
         }
@@ -57,7 +60,7 @@ namespace BicycleRentalWPF
         //Cancel button goes back to Search Worker 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchDeleteWorker d = new SearchDeleteWorker();
+            SearchDeleteWorker d = new SearchDeleteWorker(myCaller);
             d.Show();
             this.Hide();
         }

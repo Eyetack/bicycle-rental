@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 namespace BicycleRentalWPF
 {
     /// <summary>
-    /// Interaction logic for ModifyBicycle.xaml
+    /// Interaction logic for DeleteBicycle.xaml
     /// </summary>
-    public partial class ModifyBicycle : Window
+    public partial class DeleteBicycle : Window
     {
         Vehicle v;
         MainMenu myCaller;
 
-        public ModifyBicycle(string i, MainMenu m)
+         public DeleteBicycle(string i, MainMenu m)
         {
             myCaller = m;
             InitializeComponent();
@@ -49,43 +49,21 @@ namespace BicycleRentalWPF
             ColorTextBox.Text = v.Color;
             DescriptionTextBox.Text = v.Description;
             LocationTextBox.Text = v.Location;
-            PhysicalConditionTextBox.Text = v.PhysicalCondition;
-            NotesTextBox.Text = v.Notes;
-            StatusBox.Text = v.Status;
         }
 
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
-            String bm = BikeMakeTextBox.Text;
-            String mn = ModelNumberTextBox.Text;
-            String sn = SerialNumberTextBox.Text;
-            String c = ColorTextBox.Text;
-            String d = DescriptionTextBox.Text;
-            String l = LocationTextBox.Text;
-            String pc = PhysicalConditionTextBox.Text;
-            String n = NotesTextBox.Text;
-            String st = StatusBox.Text;
+         private void SubmitButton_Click(object sender, RoutedEventArgs e)
+         {
+             v.delete();
+             MessageBox.Show("Deleted Vehicle successfully.");
+             this.Hide();
+             myCaller.Show();
+         }
 
-            v.BikeMake = bm;
-            v.ModelNumber = mn;
-            v.SerialNumber = sn;
-            v.Color = c;
-            v.Description = d;
-            v.Location = l;
-            v.PhysicalCondition = pc;
-            v.Notes = n;
-            v.Status = st;
-            v.update();
-            MessageBox.Show("Modified Vehicle successfully.");
-            this.Hide();
-            myCaller.Show();
-        }
-
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-            SearchModifyBicycle d = new SearchModifyBicycle(myCaller);
-            d.Show();
-        }
+         private void CancelButton_Click(object sender, RoutedEventArgs e)
+         {
+             SearchDeleteBicycle d = new SearchDeleteBicycle(myCaller);
+             d.Show();
+             this.Hide();
+         }
     }
 }

@@ -1,9 +1,9 @@
-﻿<Window x:Class="BicycleRentalWPF.ModifyBicycle"
+﻿<Window x:Class="BicycleRentalWPF.DeleteBicycle"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ModifyBicycle" Height="570.7" Width="394">
+        Title="DeleteBicycle" Height="570.7" Width="394">
     <Grid>
-        <Label Content="Modify Bicycle Information" HorizontalAlignment="Left" Margin="132,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="Delete Bicycle Information" HorizontalAlignment="Left" Margin="132,30,0,0" VerticalAlignment="Top"/>
         <Label Content="Bike Make: " HorizontalAlignment="Left" Margin="70,98,0,0" VerticalAlignment="Top" Width="85"/>
         <TextBox x:Name="BikeMakeTextBox" HorizontalAlignment="Left" Height="23" Margin="164,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.517,0.957"/>
         <Label Content="Model Number: " HorizontalAlignment="Left" Margin="58,138,0,0" VerticalAlignment="Top"/>
@@ -12,7 +12,7 @@
         <Label Content="Color: " HorizontalAlignment="Left" Margin="84,219,0,0" VerticalAlignment="Top"/>
         <Label Content="Description: " HorizontalAlignment="Left" Margin="70,252,0,0" VerticalAlignment="Top"/>
         <Label Content="Location: " HorizontalAlignment="Left" Margin="70,287,0,0" VerticalAlignment="Top"/>
-        <Label Content="Physical Condition: " HorizontalAlignment="Left" Margin="46,324,0,0" VerticalAlignment="Top"/>
+        <Label Content="Physical Condition: " HorizontalAlignment="Left" Margin="46,321,0,0" VerticalAlignment="Top"/>
         <Label Content="Notes: " HorizontalAlignment="Left" Margin="81,379,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="SerialNumberTextBox" HorizontalAlignment="Left" Height="23" Margin="164,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="ColorTextBox" HorizontalAlignment="Left" Height="23" Margin="164,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>

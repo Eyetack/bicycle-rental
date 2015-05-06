@@ -17,17 +17,17 @@
         <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="124,303,0,0" VerticalAlignment="Top"/>
         <Label x:Name="StatusUpdated" Content="Date Status Updated" HorizontalAlignment="Left" Margin="124,334,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Notes" Content="Notes" HorizontalAlignment="Left" Margin="124,365,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="316,303,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="CredentialBox" HorizontalAlignment="Left" Margin="316,210,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="316,367,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="StatusUpdatedBox" HorizontalAlignment="Left" Height="23" Margin="316,334,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="316,272,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="InitialRegBox" HorizontalAlignment="Left" Height="23" Margin="316,241,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="23" Margin="316,179,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PhoneBox" HorizontalAlignment="Left" Height="23" Margin="316,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="316,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="316,86,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="316,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="316,303,0,0" VerticalAlignment="Top" Width="158"/>
+        <ComboBox x:Name="CredentialBox" HorizontalAlignment="Left" Margin="316,210,0,0" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="316,367,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="StatusUpdatedBox" HorizontalAlignment="Left" Height="23" Margin="316,334,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="InitialRegBox" HorizontalAlignment="Left" Height="23" Margin="316,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="23" Margin="316,179,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="PhoneBox" HorizontalAlignment="Left" Height="23" Margin="316,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="316,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="316,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="316,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <PasswordBox x:Name="PasswordBox" Margin="316,272,45,0" VerticalAlignment="Top" Width="158" Height="26"/>
 
     </Grid>
 </Window>

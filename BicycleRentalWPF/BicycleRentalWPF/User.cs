@@ -57,7 +57,7 @@ namespace BicycleRentalWPF
         public User(int bid, string f, string l, string pn, string em, string ut,
             string note)
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
             this.BannerID = bid;
@@ -75,7 +75,7 @@ namespace BicycleRentalWPF
         public User()
             : base()
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
+            connectionString = @"Provider=Microsoft.ACE.OLEDB.15.0;" +
                  @"Data source= C:\Users\Lior\Documents\Visual Studio 2013\Projects\BicycleRentalCLI\BicycleRentalCLI" +
                  @"\BicycleRental.accdb";
         }
@@ -159,7 +159,7 @@ namespace BicycleRentalWPF
         public void update()
         {
             string updateQuery = "UPDATE [User] SET " +
-                " BannerID = '" + this.BannerID + "', " +
+                " BannerId = '" + this.BannerID + "', " +
                 " FirstName = '" + this.FirstName + "', " +
                 " LastName = '" + this.LastName + "', " +
                 " PhoneNumber = '" + this.PhoneNumber + "', " +
@@ -169,7 +169,7 @@ namespace BicycleRentalWPF
                 " Status = '" + this.Status + "', " +
                 " DateStatusUpdated = '" + this.DateStatusUpdated + "' " +
                 " WHERE " +
-                " (ID = '" + this.ID + "')";
+                " ID = " + this.ID;
             //Console.WriteLine(updateQuery);
             int returnCode = modifyDatabase(updateQuery);
             if (returnCode != 0) Console.WriteLine("Error in updating User object in db.");

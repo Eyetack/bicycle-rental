@@ -14,14 +14,14 @@
         <Label x:Name="UserType" Content="User Type" HorizontalAlignment="Left" Margin="130,224,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="130,255,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Notes" Content="Notes" HorizontalAlignment="Left" Margin="130,286,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="269,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="269,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="269,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PhoneBox" HorizontalAlignment="Left" Height="23" Margin="269,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="23" Margin="269,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="UserTypeBox" HorizontalAlignment="Left" Margin="269,228,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="269,289,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="269,259,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="269,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="269,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="269,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="PhoneBox" HorizontalAlignment="Left" Height="23" Margin="269,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="23" Margin="269,196,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <ComboBox x:Name="UserTypeBox" HorizontalAlignment="Left" Margin="269,228,0,0" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="269,289,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="269,259,0,0" VerticalAlignment="Top" Width="151"/>
 
     </Grid>
 </Window>

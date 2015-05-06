@@ -19,9 +19,11 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class InsertUser : Window
     {
+        MainMenu myCaller;
         //Filling in the ComboBox
-        public InsertUser()
+        public InsertUser(MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
             UserTypeBox.Items.Add("Faculty/Staff");
             UserTypeBox.Items.Add("Student");
@@ -41,15 +43,13 @@ namespace BicycleRentalWPF
             u.insert();
             MessageBox.Show("User inserted successfully.");
             this.Hide();
-            MainMenu ourMainMenu = new MainMenu();
-            ourMainMenu.Show();
+            myCaller.Show();
         }
 
         //Cancel button goes to main menu
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu m = new MainMenu();
-            m.Show();
+            myCaller.Show();
             this.Hide();
         }
     }

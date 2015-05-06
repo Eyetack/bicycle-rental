@@ -9,6 +9,7 @@ namespace BicycleRentalWPF
     class RentalCollection : Persistable
     {
         private List<Rental> rentalsOut;
+        public List<Rental> RentalsOut { get { return rentalsOut; } }
 
 
         public RentalCollection()
@@ -26,7 +27,7 @@ namespace BicycleRentalWPF
         /// </summary>
         public void populateWithRentedOutBikes()
         {
-            string queryString = "SELECT ID FROM Rental WHERE (DateReturned = " + "' '" + ")";
+            string queryString = "SELECT ID FROM Rental WHERE (DateReturned = " + "' '" +  ")";
             List<Object> results = getValues(queryString);
             if (results != null)
             {
@@ -41,6 +42,27 @@ namespace BicycleRentalWPF
                 }
             }
             Console.WriteLine("Size of Collection ->" + rentalsOut.Count);
+        }
+
+        public Rental getRental(int id)
+        {
+            String queryString = "SELECT * FROM [Rental] WHERE (VehicleID = " + id + ") AND (CheckinWorkerID = 0)";
+            List<Object> results = getValues(queryString);
+            Rental nr = new Rental();
+            if (results != null)
+            {
+                foreach (Object[] result in results)
+                {
+                    IEnumerable<Object> row = result as IEnumerable<Object>;
+
+                    int nextRentalID = (int)row.ElementAt(0);
+                    nr.populate(nextRentalID);
+                }
+
+                return nr;
+            }
+
+            else return nr;
         }
 
         /// <summary>

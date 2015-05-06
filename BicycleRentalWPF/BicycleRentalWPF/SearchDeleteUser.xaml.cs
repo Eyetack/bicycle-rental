@@ -19,8 +19,10 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class SearchDeleteUser : Window
     {
-        public SearchDeleteUser()
+        MainMenu myCaller;
+        public SearchDeleteUser(MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
         }
 
@@ -28,7 +30,7 @@ namespace BicycleRentalWPF
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             String banner = BannerBox.Text;
-            DeleteUser d = new DeleteUser(banner);
+            DeleteUser d = new DeleteUser(banner, myCaller);
             d.Show();
             this.Hide();
         }
@@ -36,8 +38,7 @@ namespace BicycleRentalWPF
         //Cancel button goes back to main menu
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu m = new MainMenu();
-            m.Show();
+            myCaller.Show();
             this.Hide();
         }
     }

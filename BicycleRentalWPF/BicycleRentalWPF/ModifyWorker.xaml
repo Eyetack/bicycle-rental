@@ -6,26 +6,26 @@
         <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="146,381,0,0" VerticalAlignment="Top" Width="75" Click="SubmitButton_Click"/>
         <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="304,381,0,0" VerticalAlignment="Top" Width="75" Click="CancelButton_Click"/>
         <Label x:Name="ModifyWorker1" Content="Modify Worker Information" HorizontalAlignment="Left" Margin="192,21,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Banner" Content="Banner ID" HorizontalAlignment="Left" Margin="146,52,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="146,83,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="146,114,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="PhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Margin="146,145,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Email" Content="Email" HorizontalAlignment="Left" Margin="146,176,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Credential" Content="Credential" HorizontalAlignment="Left" Margin="146,207,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Password" Content="Password" HorizontalAlignment="Left" Margin="146,269,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="146,331,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Notes" Content="Notes" HorizontalAlignment="Left" Margin="146,300,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="DateOfInitialRegistration" Content="Date of Initial Registration" HorizontalAlignment="Left" Margin="146,238,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Banner" Content="Banner ID" HorizontalAlignment="Left" Margin="92,52,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="92,83,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="92,114,0,0" VerticalAlignment="Top" Width="90"/>
+        <Label x:Name="PhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Margin="92,145,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label x:Name="Email" Content="Email" HorizontalAlignment="Left" Margin="92,176,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label x:Name="Credential" Content="Credential" HorizontalAlignment="Left" Margin="92,207,0,0" VerticalAlignment="Top" Width="87"/>
+        <Label x:Name="Password" Content="Password" HorizontalAlignment="Left" Margin="92,269,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="92,331,0,0" VerticalAlignment="Top" Width="57"/>
+        <Label x:Name="Notes" Content="Notes" HorizontalAlignment="Left" Margin="92,300,0,0" VerticalAlignment="Top" Width="56"/>
+        <Label x:Name="DateOfInitialRegistration" Content="Date of Initial Registration" HorizontalAlignment="Left" Margin="92,238,0,0" VerticalAlignment="Top" Width="202"/>
         <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="304,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="304,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="304,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="PhoneBox" HorizontalAlignment="Left" Height="23" Margin="304,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="23" Margin="304,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="InitialRegBox" HorizontalAlignment="Left" Height="23" Margin="304,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="304,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="304,302,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="CredentialBox" HorizontalAlignment="Left" Margin="304,207,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="304,335,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Margin="304,269,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.507,-0.279" Height="26"/>
 
     </Grid>
 </Window>

@@ -19,23 +19,24 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class SearchModifyBicycle : Window
     {
-        public SearchModifyBicycle()
+        MainMenu myCaller;
+        public SearchModifyBicycle( MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
         }
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             String id = IdBox.Text;
-            ModifyBicycle m = new ModifyBicycle(id);
+            ModifyBicycle m = new ModifyBicycle(id, myCaller);
             m.Show();
             this.Hide();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu m = new MainMenu();
-            m.Show();
+            myCaller.Show();
             this.Hide();
         }
     }

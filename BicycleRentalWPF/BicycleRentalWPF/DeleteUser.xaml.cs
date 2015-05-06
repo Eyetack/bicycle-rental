@@ -20,12 +20,13 @@ namespace BicycleRentalWPF
     public partial class DeleteUser : Window
     {
         User u;
+        MainMenu myCaller;
 
         //Getting the data and filling in the text boxes
-        public DeleteUser(String b)
+        public DeleteUser(String b, MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
-
             UserTypeBox.Items.Add("Faculty/Staff");
             UserTypeBox.Items.Add("Student");
             StatusBox.Items.Add("Active");
@@ -56,7 +57,7 @@ namespace BicycleRentalWPF
         //Cancel button goes back to Search User
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchDeleteUser d = new SearchDeleteUser();
+            SearchDeleteUser d = new SearchDeleteUser(myCaller);
             d.Show();
             this.Hide();
         }

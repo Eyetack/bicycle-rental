@@ -19,9 +19,11 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class InsertWorker : Window
     {
+        MainMenu myCaller;
         //Filling in the combobox
-        public InsertWorker()
+        public InsertWorker(MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
             CredentialBox.Items.Add("Administrator");
             CredentialBox.Items.Add("Ordinary");
@@ -38,21 +40,19 @@ namespace BicycleRentalWPF
             String email = EmailBox.Text;
             String credential = CredentialBox.Text;
             String initialReg = InitialRegBox.Text;
-            String password = PasswordBox.Text;
+            String password = PasswordBox.Password;
             String notes = NotesBox.Text;
             Worker w = new Worker(banner, first, last, phone, email, credential, initialReg, password, notes);
             w.insert();
             MessageBox.Show("Worker inserted successfully.");
             this.Hide();
-            MainMenu ourMainMenu = new MainMenu();
-            ourMainMenu.Show();
+            myCaller.Show();
         }
 
         //Cancel button goes back to main menu
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainMenu m = new MainMenu();
-            m.Show();
+            myCaller.Show();
             this.Hide();
         }
 

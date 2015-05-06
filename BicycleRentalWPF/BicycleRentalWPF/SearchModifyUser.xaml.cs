@@ -19,16 +19,17 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class SearchModifyUser : Window
     {
-        public SearchModifyUser()
+        MainMenu myCaller;
+        public SearchModifyUser(MainMenu m)
         {
             InitializeComponent();
+            myCaller = m;
         }
 
         //Cancel button goes back to main menu
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            MainMenu m = new MainMenu();
-            m.Show();
+            myCaller.Show();
             this.Hide();
         }
 
@@ -36,7 +37,7 @@ namespace BicycleRentalWPF
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             String banner = BannerBox.Text;
-            ModifyUser m = new ModifyUser(banner);
+            ModifyUser m = new ModifyUser(banner, myCaller);
             m.Show();
             this.Hide();
         }

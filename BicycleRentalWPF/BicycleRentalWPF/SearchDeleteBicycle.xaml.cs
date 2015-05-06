@@ -15,33 +15,29 @@ using System.Windows.Shapes;
 namespace BicycleRentalWPF
 {
     /// <summary>
-    /// Interaction logic for SearchDeleteWorker.xaml
+    /// Interaction logic for SearchDeleteBicycle.xaml
     /// </summary>
-    public partial class SearchDeleteWorker : Window
+    public partial class SearchDeleteBicycle : Window
     {
         MainMenu myCaller;
-        public SearchDeleteWorker(MainMenu m)
+        public SearchDeleteBicycle(MainMenu m)
         {
             myCaller = m;
             InitializeComponent();
         }
 
-        //Submit button gives DeleteWorker screen the Banner ID and goes to DeleteWorker screen
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            String banner = BannerBox.Text;
-            DeleteWorker d = new DeleteWorker(banner, myCaller);
+            String b = BannerBox.Text;
+            DeleteBicycle d = new DeleteBicycle(b, myCaller);
             d.Show();
             this.Hide();
         }
 
-        //Cancel button goes back to main menu
-        private void CancelButton_Click_1(object sender, RoutedEventArgs e)
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            myCaller.Show();
             this.Hide();
+            myCaller.Show();
         }
-
-
     }
 }

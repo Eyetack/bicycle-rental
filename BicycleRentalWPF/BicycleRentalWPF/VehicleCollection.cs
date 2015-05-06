@@ -44,5 +44,6 @@ namespace BicycleRentalWPF
             }
             Console.WriteLine("Size of Collection ->" + bikes.Count);
         }
+
     }
 }

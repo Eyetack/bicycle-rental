@@ -7,7 +7,6 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle Fill="#FF85857A" HorizontalAlignment="Left" Height="326" Stroke="Black" VerticalAlignment="Top" Width="519" Grid.ColumnSpan="2"/>
         <Label HorizontalAlignment="Left" Margin="139,25,0,0" VerticalAlignment="Top" Grid.Column="1" Height="10" Width="10"/>
         <Label Content="Brockport Bicycle Rental System" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="169,25,0,0" Height="26" Width="179"/>
         <Label Content="Main Menu" Grid.Column="1" HorizontalAlignment="Left" Margin="229,48,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="26" Width="74"/>
@@ -19,7 +18,7 @@
         <Button x:Name="ModifyBicycleButton" Grid.ColumnSpan="2" Content="Modify Bicycle" HorizontalAlignment="Left" Margin="353,149,0,0" VerticalAlignment="Top" Width="101" FontWeight="Bold" Click="ModifyBicycleButton_Click"/>
         <Button x:Name="DeleteUserButton" Grid.ColumnSpan="2" Content="Delete User" HorizontalAlignment="Left" Margin="68,201,0,0" VerticalAlignment="Top" Width="94" FontWeight="Bold" Click="DeleteUserButton_Click"/>
         <Button x:Name="DeleteWorkerButton" Grid.ColumnSpan="2" Content="Delete Worker" HorizontalAlignment="Left" Margin="201,200,0,0" VerticalAlignment="Top" Width="117" FontWeight="Bold" Click="DeleteWorkerButton_Click"/>
-        <Button x:Name="DeleteBicycleButton" Grid.ColumnSpan="2" Content="Delete Bicycle" HorizontalAlignment="Left" Margin="351,200,0,0" VerticalAlignment="Top" Width="104" FontWeight="Bold"/>
+        <Button x:Name="DeleteBicycleButton" Grid.ColumnSpan="2" Content="Delete Bicycle" HorizontalAlignment="Left" Margin="350,200,0,0" VerticalAlignment="Top" Width="104" FontWeight="Bold" Click="DeleteBicycleButton_Click"/>
         <Button x:Name="RentABicycleButton" Grid.ColumnSpan="2" Content="Rent A Bicycle" HorizontalAlignment="Left" Margin="103,240,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold" Click="RentABicycleButton_Click"/>
         <Button x:Name="ReturnABicycleButton" Grid.ColumnSpan="2" Content="Return A Bicycle" HorizontalAlignment="Left" Margin="273,240,0,0" VerticalAlignment="Top" Width="140" FontWeight="Bold" Click="ReturnABicycleButton_Click"/>
         <Button x:Name="BackButton" Grid.ColumnSpan="2" Content="Back" HorizontalAlignment="Left" Margin="217,277,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="BackButton_Click"/>

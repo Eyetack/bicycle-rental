@@ -19,10 +19,12 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class ModifyUser : Window
     {
+        MainMenu myCaller;
         User u;
         //Getting the data and filling in the text boxes
-        public ModifyUser(String b)
+        public ModifyUser(String b, MainMenu m)
         {
+            myCaller = m;
             InitializeComponent();
             UserTypeBox.Items.Add("Faculty/Staff");
             UserTypeBox.Items.Add("Student");
@@ -65,14 +67,13 @@ namespace BicycleRentalWPF
             u.update();
             MessageBox.Show("Modified User successfully.");
             this.Hide();
-            MainMenu ourMainMenu = new MainMenu();
-            ourMainMenu.Show();
+            myCaller.Show();
         }
 
         //Cancel button goes back to Search User
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            SearchModifyUser s = new SearchModifyUser();
+            SearchModifyUser s = new SearchModifyUser(myCaller);
             s.Show();
             this.Hide();
         }
