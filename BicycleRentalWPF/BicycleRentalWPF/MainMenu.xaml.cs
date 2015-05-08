@@ -26,7 +26,6 @@ namespace BicycleRentalWPF
         {
             w = work;
             InitializeComponent();
-          
         }
 
         public Worker getWorker()
@@ -34,6 +33,7 @@ namespace BicycleRentalWPF
             return w;
         }
 
+        //back button brings user back to log in screen
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -41,6 +41,7 @@ namespace BicycleRentalWPF
             loginWindow.Show();
         }
 
+        //insert bicycle button brings user to insert bicycle window
         private void InsertBicycleButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -48,6 +49,7 @@ namespace BicycleRentalWPF
             ourInsertBicycle.Show();
         }
 
+        //insert worker button brings user to insert worker window
         private void InsertWorkerButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -55,6 +57,7 @@ namespace BicycleRentalWPF
             ourInsertWorker.Show();
         }
 
+        //insert user button brings user to insert user window
         private void InsertUserButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -62,6 +65,7 @@ namespace BicycleRentalWPF
             ourInsertUser.Show();
         }
 
+        //modify user button brings user to search modify user window
         private void ModifyUserButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -69,6 +73,7 @@ namespace BicycleRentalWPF
             ourSearchModifyUser.Show();
         }
 
+        //modify worker button brings worker to search modify worker window 
         private void ModifyWorkerButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -76,6 +81,7 @@ namespace BicycleRentalWPF
             ourSearchModifyWorker.Show();
         }
 
+        //delete user button brings user to search modify user window
         private void DeleteUserButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -83,6 +89,7 @@ namespace BicycleRentalWPF
             ourSearchDeleteUser.Show();
         }
 
+        //delete worker button brings worker to search modify worker
         private void DeleteWorkerButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -90,6 +97,7 @@ namespace BicycleRentalWPF
             ourSearchDeleteWorker.Show();
         }
 
+        //rent a bicycle button brings user to rent a bicycle window
         private void RentABicycleButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -97,6 +105,7 @@ namespace BicycleRentalWPF
             ourRentaBicycle.Show();
         }
 
+        //return a bicycle button brings user to return a bicycle window.
         private void ReturnABicycleButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -104,6 +113,7 @@ namespace BicycleRentalWPF
             ourReturnABicycle.Show();
         }
 
+        //modify bicycle button brings user to search modify bicycle 
         private void ModifyBicycleButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -111,6 +121,7 @@ namespace BicycleRentalWPF
             ourSearchModifyBicycle.Show();
         }
 
+        //delete bicycle button brings user to search delete bicycle window
         private void DeleteBicycleButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();

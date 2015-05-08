@@ -28,10 +28,11 @@ namespace BicycleRentalWPF
             InitializeComponent();
             UserTypeBox.Items.Add("Faculty/Staff");
             UserTypeBox.Items.Add("Student");
+            UserTypeBox.Items.Add("Ordinary");
             StatusBox.Items.Add("Active");
             StatusBox.Items.Add("Inactive");
             int banner = Convert.ToInt32(b);
-            u = new User(banner, "", "", "", "", "", "");  
+            u = new User();  
             u.populate(banner);
             BannerBox.Text = Convert.ToString(u.BannerID);
             FirstNameBox.Text = u.FirstName;

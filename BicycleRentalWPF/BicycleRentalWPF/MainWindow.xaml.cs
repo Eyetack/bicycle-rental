@@ -20,16 +20,19 @@ namespace BicycleRentalWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        //initializes the login window
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        //Terminates the program
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             System.Environment.Exit(0);
         }
 
+        //Starts the login process to the application
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             //login workflow here

@@ -32,7 +32,7 @@ namespace BicycleRentalWPF
             StatusBox.Items.Add("Active");
             StatusBox.Items.Add("Inactive");
             int banner = Convert.ToInt32(b);
-            w = new Worker(b, "", "", "", "", "", "", "", "");
+            w = new Worker(b, "", "", "", "", "", "", "");
             w.populate(banner);
             BannerBox.Text = Convert.ToString(w.BannerID);
             FirstNameBox.Text = w.FirstName;
@@ -40,7 +40,6 @@ namespace BicycleRentalWPF
             PhoneBox.Text = w.PhoneNumber;
             EmailBox.Text = w.EmailAddress;
             CredentialBox.Text = w.Credential;
-            InitialRegBox.Text = w.InitialRegistrationDate;
             PasswordBox.Password = w.WorkerPassword;
             NotesBox.Text = w.Notes;
             StatusBox.Text = w.Status;
@@ -55,7 +54,6 @@ namespace BicycleRentalWPF
             String phone = PhoneBox.Text;
             String email = EmailBox.Text;
             String credential = CredentialBox.Text;
-            String initialReg = InitialRegBox.Text;
             String password = PasswordBox.Password;
             String status = StatusBox.Text;
             String notes = NotesBox.Text;
@@ -66,7 +64,6 @@ namespace BicycleRentalWPF
             w.PhoneNumber = phone;
             w.EmailAddress = email;
             w.Credential = credential;
-            w.InitialRegistrationDate = initialReg;
             w.WorkerPassword = password;
             w.Status = status;
             w.DateStatusUpdated = DateTime.Now.ToString("yyyy-MM-dd");

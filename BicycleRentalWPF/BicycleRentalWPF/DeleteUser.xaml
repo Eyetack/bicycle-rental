@@ -6,22 +6,24 @@
         <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="141,359,0,0" VerticalAlignment="Top" Width="75" Click="SubmitButton_Click"/>
         <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="304,359,0,0" VerticalAlignment="Top" Width="75" Click="CancelButton_Click"/>
         <Label x:Name="DeleteUser1" Content="Delete User" HorizontalAlignment="Left" Margin="220,29,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Banner" Content="Banner ID" HorizontalAlignment="Left" Margin="141,66,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="141,97,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="141,128,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="PhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Margin="141,159,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Email" Content="Email" HorizontalAlignment="Left" Margin="141,190,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="UserType" Content="User Type" HorizontalAlignment="Left" Margin="141,223,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="141,256,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Notes" Content="Notes" Margin="141,288,337,0" VerticalAlignment="Top"/>
+        <Label x:Name="Banner" Content="Banner ID" HorizontalAlignment="Left" Margin="98,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="FirstName" Content="First Name" HorizontalAlignment="Left" Margin="98,97,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LastName" Content="Last Name" HorizontalAlignment="Left" Margin="98,128,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Margin="98,159,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Email" Content="Email" HorizontalAlignment="Left" Margin="98,190,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="UserType" Content="User Type" HorizontalAlignment="Left" Margin="98,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Status" Content="Status" HorizontalAlignment="Left" Margin="98,284,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Notes" Content="Notes" Margin="98,316,380,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="UserTypeBox" HorizontalAlignment="Left" Margin="290,225,0,0" VerticalAlignment="Top" Width="153"/>
-        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="290,256,0,0" VerticalAlignment="Top" Width="153"/>
-        <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="290,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <ComboBox x:Name="StatusBox" HorizontalAlignment="Left" Margin="290,284,0,0" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="NotesBox" HorizontalAlignment="Left" Height="23" Margin="290,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="23" Margin="290,193,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <TextBox x:Name="PhoneBox" HorizontalAlignment="Left" Height="23" Margin="290,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="23" Margin="290,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="23" Margin="290,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
         <TextBox x:Name="BannerBox" HorizontalAlignment="Left" Height="23" Margin="290,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="DateStatusUpdatedBox" Height="23" Margin="290,256,76,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Date Status Updated" HorizontalAlignment="Left" Margin="98,256,0,0" VerticalAlignment="Top" Width="140"/>
 
     </Grid>
 </Window>

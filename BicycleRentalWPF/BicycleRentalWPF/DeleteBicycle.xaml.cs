@@ -26,6 +26,7 @@ namespace BicycleRentalWPF
         {
             myCaller = m;
             InitializeComponent();
+            //populates our comboboxes
             PhysicalConditionTextBox.Items.Add("Good");
             PhysicalConditionTextBox.Items.Add("Damaged");
             LocationTextBox.Items.Add("Benedict");
@@ -42,6 +43,7 @@ namespace BicycleRentalWPF
             StatusBox.Items.Add("Inactive");
             int id = Convert.ToInt32(i);
             v = new Vehicle();
+            //populate a vehicle instance with the id provided as input
             v.populate(id);
             BikeMakeTextBox.Text = v.BikeMake;
             ModelNumberTextBox.Text = v.ModelNumber;
@@ -53,6 +55,7 @@ namespace BicycleRentalWPF
 
          private void SubmitButton_Click(object sender, RoutedEventArgs e)
          {
+             //deletes the vehicle from the Access file and displays a sucess MessageBox
              v.delete();
              MessageBox.Show("Deleted Vehicle successfully.");
              this.Hide();
@@ -61,6 +64,7 @@ namespace BicycleRentalWPF
 
          private void CancelButton_Click(object sender, RoutedEventArgs e)
          {
+             //brings the user back to the searchdeletebicycle screen
              SearchDeleteBicycle d = new SearchDeleteBicycle(myCaller);
              d.Show();
              this.Hide();

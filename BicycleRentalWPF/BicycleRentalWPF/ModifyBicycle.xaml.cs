@@ -26,6 +26,7 @@ namespace BicycleRentalWPF
         {
             myCaller = m;
             InitializeComponent();
+            //populates our comboboxes
             PhysicalConditionTextBox.Items.Add("Good");
             PhysicalConditionTextBox.Items.Add("Damaged");
             LocationTextBox.Items.Add("Benedict");
@@ -42,6 +43,7 @@ namespace BicycleRentalWPF
             StatusBox.Items.Add("Inactive");
             int id = Convert.ToInt32(i);
             v = new Vehicle();
+            //populates the vehicle instance with the corresponding bicycle data with the id provided as input
             v.populate(id);
             BikeMakeTextBox.Text = v.BikeMake;
             ModelNumberTextBox.Text = v.ModelNumber;
@@ -56,6 +58,7 @@ namespace BicycleRentalWPF
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
+            //extracts bicycle data from the textboxes
             String bm = BikeMakeTextBox.Text;
             String mn = ModelNumberTextBox.Text;
             String sn = SerialNumberTextBox.Text;
@@ -66,6 +69,7 @@ namespace BicycleRentalWPF
             String n = NotesTextBox.Text;
             String st = StatusBox.Text;
 
+            //populates our bicycle instance with the extracted data
             v.BikeMake = bm;
             v.ModelNumber = mn;
             v.SerialNumber = sn;
@@ -75,6 +79,7 @@ namespace BicycleRentalWPF
             v.PhysicalCondition = pc;
             v.Notes = n;
             v.Status = st;
+            //updates the backend
             v.update();
             MessageBox.Show("Modified Vehicle successfully.");
             this.Hide();

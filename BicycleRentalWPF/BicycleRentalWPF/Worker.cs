@@ -67,7 +67,7 @@ namespace BicycleRentalWPF
         /// <param name="ird">InitialRegistrationDate</param>
         /// <param name="wpwd">WorkerPassword</param>
         /// <param name="note">Notes</param>
-        public Worker(string bid, string f, string l, string pn, string em, string c, string ird,
+        public Worker(string bid, string f, string l, string pn, string em, string c, 
             string wpwd, string note)
             : base()
         {
@@ -80,7 +80,7 @@ namespace BicycleRentalWPF
             this.PhoneNumber = pn;
             this.EmailAddress = em;
             this.Credential = c;
-            this.InitialRegistrationDate = ird;
+            this.InitialRegistrationDate = DateTime.Now.ToString("yyyy-MM-dd");
             this.WorkerPassword = wpwd;
             this.Notes = note;
             this.Status = "Active";

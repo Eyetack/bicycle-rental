@@ -34,7 +34,7 @@ namespace BicycleRentalWPF
             StatusBox.Items.Add("Inactive");
 
             int banner = Convert.ToInt32(b);
-            w = new Worker(b, "", "", "", "", "", "", "", "");
+            w = new Worker(b, "", "", "", "", "", "", "");
             w.populate(banner);
             BannerBox.Text = w.BannerID;
             FirstNameBox.Text = w.FirstName;

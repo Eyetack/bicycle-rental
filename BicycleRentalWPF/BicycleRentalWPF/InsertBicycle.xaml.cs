@@ -20,6 +20,8 @@ namespace BicycleRentalWPF
     public partial class InsertBicycle : Window
     {
         MainMenu myCaller;
+
+        //populates the Physical Condition and Location Comboboxes
         public InsertBicycle(MainMenu m)
         {
             myCaller = m;
@@ -38,6 +40,7 @@ namespace BicycleRentalWPF
             LocationTextBox.Items.Add("Welcome Center");
         }
 
+        //Submit button inserts Bicycle
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             string bikeMakeText = BikeMakeTextBox.Text;
@@ -62,6 +65,7 @@ namespace BicycleRentalWPF
             myCaller.Show();
         }
 
+        //back button goes to main menu
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             myCaller.Show();

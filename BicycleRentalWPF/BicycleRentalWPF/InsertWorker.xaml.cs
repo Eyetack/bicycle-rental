@@ -20,6 +20,7 @@ namespace BicycleRentalWPF
     public partial class InsertWorker : Window
     {
         MainMenu myCaller;
+        String credential;
         //Filling in the combobox
         public InsertWorker(MainMenu m)
         {
@@ -38,11 +39,10 @@ namespace BicycleRentalWPF
             String last = LastNameBox.Text;
             String phone = PhoneNumberBox.Text;
             String email = EmailBox.Text;
-            String credential = CredentialBox.Text;
-            String initialReg = InitialRegBox.Text;
+            credential = CredentialBox.Text;
             String password = PasswordBox.Password;
             String notes = NotesBox.Text;
-            Worker w = new Worker(banner, first, last, phone, email, credential, initialReg, password, notes);
+            Worker w = new Worker(banner, first, last, phone, email, credential, password, notes);
             w.insert();
             MessageBox.Show("Worker inserted successfully.");
             this.Hide();
@@ -58,7 +58,7 @@ namespace BicycleRentalWPF
 
         private void CredentialBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            credential = CredentialBox.Text;
         }
 
     }

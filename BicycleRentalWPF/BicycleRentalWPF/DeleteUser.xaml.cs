@@ -27,11 +27,14 @@ namespace BicycleRentalWPF
         {
             myCaller = m;
             InitializeComponent();
+
+            //populates our comboboxes
             UserTypeBox.Items.Add("Faculty/Staff");
             UserTypeBox.Items.Add("Student");
             StatusBox.Items.Add("Active");
             StatusBox.Items.Add("Inactive");
 
+            //creates a user instance and populates the controls with his/her data
             int banner = Convert.ToInt32(b);
             u = new User(banner, "", "", "", "", "", "");
             u.populate(banner);
@@ -42,7 +45,7 @@ namespace BicycleRentalWPF
             EmailBox.Text = u.EmailAddress;
             UserTypeBox.Text = u.UserType;
             StatusBox.Text = u.Status;
-            StatusUpdatedBox.Text = u.DateStatusUpdated;
+            DateStatusUpdatedBox.Text = u.DateStatusUpdated;
             NotesBox.Text = u.Notes;
 
         }
